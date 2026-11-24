@@ -1,5 +1,29 @@
 # Registro de sesiones
 
+## 2026-11-25 — Adaptación al enunciado actualizado
+
+### Requisitos incorporados
+- Se incorpora el checklist exacto: SOUL.md, CONTEXT.md, INSTRUCTIONS.md, LOG.md; mínimo dos fichas de scroll con decisión y verificación; web publicada en GitHub Pages; PDF final con enlace a web y repositorio.
+- Se crean los cuatro documentos con los nombres solicitados, manteniendo los archivos en minúsculas como documentos de continuidad existentes.
+- Se actualizan las fichas y el proceso para explicitar quién decide (Ana Zhang), qué apoyo crítico ofrece ChatGPT y quién verifica el resultado. La prueba con público externo queda pendiente hasta realizarse.
+- Se identifican los scrolls 01 y 02 como trabajados a nivel conceptual. No se declaran prototipados, implementados ni validados visualmente porque todavía no hay evidencia Figma accesible en el repositorio.
+
+### Estado y bloqueos
+- La web sigue siendo una plantilla HTML/CSS/JS de ejemplo; no se ha sustituido por un diseño inventado.
+- GitHub Pages no se considera publicado hasta que el workflow termine correctamente y la URL cargue.
+- Falta exportar/compartir el diseño de Figma para registrar composición, decisiones visuales y pruebas reales.
+- Falta generar el PDF final una vez que exista una URL publicada y verificada.
+
+### Próximos pasos
+1. Activar GitHub Pages en Settings → Pages → GitHub Actions.
+2. Ejecutar el workflow y verificar la URL.
+3. Contrastar las dos fichas con los frames reales de Figma y añadir capturas.
+4. Implementar la versión web correspondiente a los scrolls trabajados.
+5. Generar el PDF de entrega con los enlaces.
+
+---
+
+
 Este archivo mantiene el historial cronológico del trabajo. Añadir las entradas nuevas al principio, sin borrar ni reescribir entradas anteriores salvo corrección solicitada.
 
 ## 2026-11-24 — Preparación de GitHub Pages
