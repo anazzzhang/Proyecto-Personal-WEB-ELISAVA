@@ -73,7 +73,7 @@ La documentación debe distinguir entre trabajo conceptual, prototipo, implement
 - **Confirmado:** el concepto general, las plataformas de rastros digitales y la intención de una web larga.
 - **Provisional:** el título *ECHOES OF WHO I WAS* y la secuencia de siete scrolls.
 - **Pendiente:** cerrar la pregunta de investigación, validar los contenidos de cada scroll, incorporar referencias verificadas, definir la dirección visual final y completar las fichas con evidencia real.
-- **Técnico:** el repositorio conserva una plantilla mínima HTML/CSS/JS; todavía no contiene la web final.
+- **Técnico:** se ha creado una primera versión responsive y navegable (v0.1) con introducción, pregunta de investigación y presentación provisional de Spotify, Pinterest e Instagram. Es un prototipo de contenido y recorrido, pendiente de contrastar con Figma; no se presenta como diseño final.
 - **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar el workflow. No existe todavía una publicación verificada.
 
 ## Criterios de evaluación del proceso
