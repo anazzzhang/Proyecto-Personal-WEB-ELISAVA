@@ -59,12 +59,22 @@ Cada scroll sigue un ciclo documentado:
 
 En cada vuelta se registra qué se quería comprobar, qué se modificó, qué evidencia existe y qué decisión se tomó. No se marcan como realizadas pruebas que aún no se han hecho.
 
-## Estado actual (2026-11-24)
+## Requisitos exactos de la entrega (actualizados 2026-11-25)
+
+La autora ha compartido el siguiente checklist:
+1. Carpeta del proyecto en GitHub con SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md actualizado.
+2. Fichas de loop: una por cada scroll trabajado, mínimo dos; cada ficha debe indicar quién decide y quién verifica el resultado.
+3. Web publicada en GitHub Pages y funcionando.
+4. Entrega final: PDF con enlace a la web y al repositorio.
+
+La documentación debe distinguir entre trabajo conceptual, prototipo, implementación y validación. Dos fichas pueden documentar trabajo conceptual ya realizado, pero no se deben presentar como pruebas de diseño o test de usuario si no existen esas evidencias.
+
+## Estado actual (2026-11-25)
 - **Confirmado:** el concepto general, las plataformas de rastros digitales y la intención de una web larga.
 - **Provisional:** el título *ECHOES OF WHO I WAS* y la secuencia de siete scrolls.
 - **Pendiente:** cerrar la pregunta de investigación, validar los contenidos de cada scroll, incorporar referencias verificadas, definir la dirección visual final y completar las fichas con evidencia real.
 - **Técnico:** el repositorio conserva una plantilla mínima HTML/CSS/JS; todavía no contiene la web final.
-- **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló en el paso de configuración de Pages porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar manualmente el workflow. No existe todavía una publicación verificada.
+- **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar el workflow. No existe todavía una publicación verificada.
 
 ## Criterios de evaluación del proceso
 - Trazabilidad: que se entienda la evolución.
