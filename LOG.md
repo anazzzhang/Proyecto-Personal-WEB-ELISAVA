@@ -1,8 +1,28 @@
-# LOG — Registro de sesiones
+## 2026-11-25 — Consolidación de la documentación
 
-Copia de consulta para la entrega. El registro cronológico editable se mantiene en log.md; al cerrar cada sesión, actualizar ambos documentos para que coincidan.
+### Trabajo realizado
+- Se integraron en `SOUL.md` los contenidos complementarios de `personalidad.md` y `criterio.md`: tono, forma de colaboración, prioridades, rigor de investigación y criterios técnicos.
+- Se integró en `CONTEXT.md` la información estable de `memoria.md`, evitando mantener dos documentos de contexto.
+- Se consolidó el historial de sesiones en `LOG.md`; este pasa a ser el único registro cronológico.
+- Se actualizó `INSTRUCTIONS.md` para que el inicio y cierre de cada sesión utilicen exclusivamente los cuatro documentos canónicos.
+- Se actualizaron `README.md` y `documentacion/proceso.md` para eliminar referencias a los archivos secundarios.
+- Se revisaron las fichas para retirar un bloque de decisión y verificación duplicado.
 
-# Registro de sesiones
+### Decisiones
+- Los únicos documentos generales de continuidad son `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md`.
+- La metodología y las fichas siguen separadas porque cumplen una función distinta y necesaria para la entrega.
+- Se retiran los archivos secundarios duplicados y el antiguo Skill de continuidad, cuyo procedimiento queda incorporado en `INSTRUCTIONS.md`.
+
+### Pendientes
+- Revisar visualmente la web publicada.
+- Contrastar el prototipo con Figma y completar las evidencias de las fichas.
+- Preparar el PDF final con los enlaces de entrega.
+
+---
+
+# LOG — Registro único de sesiones
+
+Este es el único historial cronológico del repositorio. Añadir las sesiones nuevas al principio y conservar las entradas anteriores.
 
 ## 2026-11-25 — Primer prototipo web y activación del despliegue
 
