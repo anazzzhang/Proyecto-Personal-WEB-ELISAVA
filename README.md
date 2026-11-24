@@ -15,7 +15,7 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 
 ## Checklist de entrega
 
-- [x] Base documental: SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md (se mantienen también los archivos de trabajo en minúsculas para continuidad).
+- [x] Base documental: SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md.
 - [x] Fichas de los dos primeros scrolls trabajados a nivel conceptual, con responsable de decisión y verificación; la validación visual y externa queda indicada como pendiente.
 - [x] Despliegue de GitHub Actions completado correctamente; queda la comprobación visual final de la URL en navegador.
 - [ ] PDF final con enlaces a la web y al repositorio.
@@ -23,10 +23,10 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 ## Contenido del repositorio
 
 - `index.html`, `style.css`, `script.js`: prototipo narrativo responsive v0.1; pendiente de contrastar con Figma.
-- `contexto.md`: brief y estado del proyecto.
+- `CONTEXT.md`: brief y estado del proyecto.
 - `memoria.md`: decisiones estables y contexto que debe conservarse.
 - `log.md`: registro cronológico de sesiones.
-- `personalidad.md`, `criterio.md`, `instruction.md`: criterios de colaboración y continuidad.
+- `SOUL.md`, `criterio.md`, `INSTRUCTIONS.md`: criterios de colaboración y continuidad.
 - `documentacion/proceso.md`: metodología para documentar y repetir el proceso.
 - `documentacion/fichas-de-scroll.md`: fichas de loop de cada scroll.
 - `.github/workflows/pages.yml`: workflow preparado para publicar el sitio con GitHub Pages.
@@ -45,7 +45,7 @@ Esta secuencia recoge la estructura que se ha explorado hasta ahora. No es todav
 
 ## Cómo seguir el proceso
 
-1. Consultar `contexto.md` y `memoria.md` antes de tomar decisiones.
+1. Consultar `CONTEXT.md` y `memoria.md` antes de tomar decisiones.
 2. Revisar la ficha del scroll que se vaya a trabajar.
 3. Registrar objetivo, contenido, interacción, transición y prueba.
 4. Diseñar y probar el scroll en Figma.
@@ -57,9 +57,7 @@ Consulta [el proceso y las fichas de scroll](documentacion/proceso.md).
 
 ## Publicación
 
-El workflow de GitHub Actions está preparado para desplegar la carpeta raíz, pero requiere activar GitHub Pages desde los ajustes del repositorio. En **Settings → Pages → Build and deployment**, selecciona **GitHub Actions** como fuente. Después, ejecuta manualmente el workflow **Deploy static site to GitHub Pages** desde la pestaña **Actions**.
-
-El primer intento automático no pudo completar el paso de configuración de Pages, ya que el sitio todavía no estaba habilitado. El workflow queda ahora en modo manual para evitar ejecuciones fallidas hasta completar la configuración. La publicación solo se considerará realizada cuando el workflow termine correctamente y la URL cargue.
+El workflow de GitHub Actions está configurado para desplegar la carpeta raíz. La ejecución **Deploy static site to GitHub Pages** terminó correctamente (run 45506876303). Abre la URL de GitHub Pages para comprobar visualmente la carga y el comportamiento desde distintos dispositivos.
 
 ## Criterio de documentación
 
