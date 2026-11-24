@@ -1,6 +1,6 @@
 # Fichas de loop — ECHOES OF WHO I WAS
 
-Las fichas siguientes convierten la estructura narrativa explorada en un proceso que se puede seguir y repetir. Los siete scrolls son una **propuesta de organización**, no una confirmación de que el diseño final ya esté resuelto.
+Las fichas siguientes convierten la estructura narrativa explorada en un proceso que se puede seguir y repetir. Los siete scrolls son una **propuesta de organización**; los scrolls 01 y 02 se consideran trabajados a nivel de conceptualización y estructura narrativa, pero su diseño visual en Figma y sus pruebas de uso siguen pendientes. No se afirma que estén implementados ni validados visualmente.
 
 Completar cada apartado con evidencia real del proceso. No marcar pruebas, decisiones visuales ni interacciones como realizadas hasta haberlas llevado a cabo.
 
@@ -12,13 +12,15 @@ Completar cada apartado con evidencia real del proceso. No marcar pruebas, decis
 - **Entrada y salida:** relación con los scrolls vecinos.
 - **Loop:** pregunta → hipótesis → cambio → prueba → observación → decisión.
 - **Evidencia:** enlace a Figma, captura, vídeo, commit o resultado de prueba.
+- **Quién decide:** Ana Zhang, autora del proyecto, conserva la decisión final de concepto, contenido, diseño y aceptación.
+- **Quién verifica:** revisión crítica de ChatGPT para detectar incoherencias y comprobar que la ficha responde al brief; la autora contrasta la revisión con su intención. La legibilidad y comprensión con público real solo se consideran verificadas cuando se realiza una prueba con otra persona y se registra su resultado.
 - **Pendientes:** aquello que falta por decidir o comprobar.
 
 ---
 
 ## Scroll 01 — Introduction
 
-**Estado:** propuesta.
+**Estado:** trabajado en conceptualización; prototipo visual y prueba pendientes.
 
 ### Objetivo
 Presentar el universo del proyecto y abrir la pregunta sobre la relación entre identidad, memoria y huella digital.
@@ -40,6 +42,20 @@ Presentar el universo del proyecto y abrir la pregunta sobre la relación entre 
 4. Revisar legibilidad, escala, ritmo y llamada al scroll.
 5. Registrar qué elemento guía mejor la entrada.
 
+
+### Decisión y verificación
+- **Decide:** Ana Zhang. Se reserva la decisión final sobre el tono, la jerarquía, la redacción y la composición.
+- **Apoya la revisión:** ChatGPT puede señalar problemas de claridad, coherencia narrativa y correspondencia con el enunciado; no sustituye la decisión de la autora.
+- **Verifica el resultado:** primero, Ana revisa que la propuesta represente su intención. Después, una persona externa debe comprobar si entiende el propósito del scroll y cómo continuar. Esta segunda verificación está **pendiente** hasta realizar y registrar una prueba real.
+- **Evidencia disponible:** decisiones y contenido conceptual recogidos en conversaciones de trabajo y en contexto.md; no existe todavía un enlace a un frame Figma ni una captura validada en este repositorio.
+
+
+### Decisión y verificación
+- **Decide:** Ana Zhang. Se reserva la decisión final sobre el tono, la jerarquía, la redacción y la composición.
+- **Apoya la revisión:** ChatGPT puede señalar problemas de claridad, coherencia narrativa y correspondencia con el enunciado; no sustituye la decisión de la autora.
+- **Verifica el resultado:** primero, Ana revisa que la propuesta represente su intención. Después, una persona externa debe comprobar si entiende el propósito del scroll y cómo continuar. Esta segunda verificación está **pendiente** hasta realizar y registrar una prueba real.
+- **Evidencia disponible:** decisiones y contenido conceptual recogidos en conversaciones de trabajo y en contexto.md; no existe todavía un enlace a un frame Figma ni una captura validada en este repositorio.
+
 ### Evidencia
 - Figma: pendiente.
 - Captura antes/después: pendiente.
@@ -53,7 +69,7 @@ Presentar el universo del proyecto y abrir la pregunta sobre la relación entre 
 
 ## Scroll 02 — Research question
 
-**Estado:** propuesta.
+**Estado:** trabajado en conceptualización; prototipo visual y prueba pendientes.
 
 ### Objetivo
 Formular la pregunta central y explicar por qué mirar los rastros digitales puede revelar aspectos de una identidad cambiante.
@@ -262,3 +278,5 @@ Añadir una línea cada vez que se complete una vuelta de trabajo. Mantener los 
 | Fecha | Scroll | Pregunta / cambio | Evidencia | Observación y decisión |
 |---|---|---|---|---|
 | 2026-11-24 | 01–07 | Creación de la estructura inicial de fichas | Este documento | Fichas creadas como propuestas; falta contrastarlas con Figma |
+| 2026-11-25 | 01 | Desarrollo conceptual de la introducción y definición de responsabilidades | contexto.md; conversaciones de trabajo | Trabajo conceptual documentado. Sin frame/captura ni test de comprensión; verificación externa pendiente |
+| 2026-11-25 | 02 | Desarrollo conceptual de la pregunta de investigación y su función narrativa | contexto.md; conversaciones de trabajo | Trabajo conceptual documentado. La pregunta definitiva y su legibilidad visual siguen pendientes |
