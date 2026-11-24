@@ -2,6 +2,26 @@
 
 Este archivo mantiene el historial cronológico del trabajo. Añadir las entradas nuevas al principio, sin borrar ni reescribir entradas anteriores salvo corrección solicitada.
 
+## 2026-11-24 — Preparación de GitHub Pages
+
+### Trabajo realizado
+- Se añadió el workflow `.github/workflows/pages.yml`.
+- Se verificó que el push activó GitHub Actions.
+- Se revisó la ejecución 1 del workflow **Deploy static site to GitHub Pages**.
+- El job `build` falló en el paso **Configure GitHub Pages**; el job de despliegue quedó omitido.
+- Se confirmó en los metadatos del repositorio que Pages todavía no estaba habilitado (`has_pages: false`).
+
+### Decisiones
+- Dejar el workflow en modo manual (`workflow_dispatch`) para evitar nuevas ejecuciones fallidas antes de activar Pages.
+- Activar GitHub Pages desde Settings → Pages → Build and deployment → GitHub Actions.
+- Después, ejecutar manualmente el workflow y comprobar la URL publicada.
+
+### Estado
+- **Workflow creado y verificado en GitHub Actions.**
+- **Publicación no completada.** No se debe compartir una URL como si la web estuviera publicada hasta que el despliegue termine correctamente.
+
+---
+
 ## 2026-11-24 — Documentación del proceso y fichas de scroll
 
 ### Objetivo
@@ -48,7 +68,7 @@ Adaptar el repositorio al enunciado de la entrega: compartir el proceso de const
 3. Implementar progresivamente los scrolls en HTML/CSS/JS.
 4. Activar GitHub Pages y comprobar la URL publicada.
 5. Registrar cada iteración y prueba en este log.
- 
+
 ## 2026-11-04 — Configuración inicial de continuidad
 
 ### Trabajo realizado
