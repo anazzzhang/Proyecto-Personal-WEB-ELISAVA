@@ -47,7 +47,7 @@ Presentar el universo del proyecto y abrir la pregunta sobre la relación entre 
 - **Decide:** Ana Zhang. Se reserva la decisión final sobre el tono, la jerarquía, la redacción y la composición.
 - **Apoya la revisión:** ChatGPT puede señalar problemas de claridad, coherencia narrativa y correspondencia con el enunciado; no sustituye la decisión de la autora.
 - **Verifica el resultado:** primero, Ana revisa que la propuesta represente su intención. Después, una persona externa debe comprobar si entiende el propósito del scroll y cómo continuar. Esta segunda verificación está **pendiente** hasta realizar y registrar una prueba real.
-- **Evidencia disponible:** decisiones y contenido conceptual recogidos en conversaciones de trabajo y en contexto.md; no existe todavía un enlace a un frame Figma ni una captura validada en este repositorio.
+- **Evidencia disponible:** decisiones y contenido conceptual recogidos en conversaciones de trabajo y en CONTEXT.md; no existe todavía un enlace a un frame Figma ni una captura validada en este repositorio.
 
 
 ### Decisión y verificación
