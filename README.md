@@ -22,7 +22,7 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 - `personalidad.md`, `criterio.md`, `instruction.md`: criterios de colaboración y continuidad.
 - `documentacion/proceso.md`: metodología para documentar y repetir el proceso.
 - `documentacion/fichas-de-scroll.md`: fichas de loop de cada scroll.
-- `.github/workflows/pages.yml`: flujo preparado para publicar el sitio con GitHub Pages.
+- `.github/workflows/pages.yml`: workflow preparado para publicar el sitio con GitHub Pages.
 
 ## Estructura de trabajo provisional
 
@@ -50,7 +50,9 @@ Consulta [el proceso y las fichas de scroll](documentacion/proceso.md).
 
 ## Publicación
 
-El repositorio incluye un workflow para desplegar la carpeta raíz en GitHub Pages al actualizar `main`. La publicación todavía requiere activar GitHub Pages en los ajustes del repositorio y seleccionar **GitHub Actions** como fuente. Hasta que se complete ese paso y exista un despliegue correcto, no se considera que la web esté publicada.
+El workflow de GitHub Actions está preparado para desplegar la carpeta raíz, pero la primera ejecución requiere activar GitHub Pages desde los ajustes del repositorio. En **Settings → Pages → Build and deployment**, selecciona **GitHub Actions** como fuente. Después, ejecuta manualmente el workflow **Deploy static site to GitHub Pages** desde la pestaña **Actions**.
+
+El primer intento automático no pudo completar el paso de configuración de Pages, ya que el sitio todavía no estaba habilitado. El workflow queda ahora en modo manual para evitar ejecuciones fallidas hasta completar la configuración. La publicación solo se considerará realizada cuando el workflow termine correctamente y la URL cargue.
 
 ## Criterio de documentación
 
