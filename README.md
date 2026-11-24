@@ -17,7 +17,7 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 
 - [x] Base documental: SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md (se mantienen también los archivos de trabajo en minúsculas para continuidad).
 - [x] Fichas de los dos primeros scrolls trabajados a nivel conceptual, con responsable de decisión y verificación; la validación visual y externa queda indicada como pendiente.
-- [ ] Web desplegada y comprobada en GitHub Pages (workflow activado; ejecución todavía en curso en la última comprobación).
+- [x] Despliegue de GitHub Actions completado correctamente; queda la comprobación visual final de la URL en navegador.
 - [ ] PDF final con enlaces a la web y al repositorio.
 
 ## Contenido del repositorio
