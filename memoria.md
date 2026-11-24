@@ -58,7 +58,7 @@ La documentación de proceso se encuentra en `documentacion/proceso.md` y las fi
 - El prototipo es provisional y debe contrastarse con el diseño real de Figma antes de considerarlo la versión visual definitiva.
 - La API del repositorio ya informa `has_pages: true`; la activación de Pages parece estar habilitada.
 - Se prepara un workflow de GitHub Actions para publicar la carpeta raíz cuando Pages se configure.
-- El workflow de Actions se ha disparado tras el cambio de web; no afirmar que está publicada hasta verificar que el despliegue termina correctamente y la URL carga.
+- El workflow `Deploy static site to GitHub Pages` terminó con `success` (ejecución 45506876303). La publicación se ha desplegado; falta la comprobación visual manual de la URL pública.
 
 ## Principios de continuidad
 - Diferenciar hechos confirmados, hipótesis, propuestas y pendientes.
