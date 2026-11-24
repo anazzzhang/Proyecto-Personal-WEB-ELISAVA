@@ -1,5 +1,28 @@
 # Registro de sesiones
 
+## 2026-11-25 — Primer prototipo web y activación del despliegue
+
+### Trabajo realizado
+- Se sustituyó la plantilla HTML de ejemplo por una primera versión narrativa responsive de ECHOES OF WHO I WAS.
+- Se desarrollaron introducción, pregunta de investigación, sección de rastros digitales y cierre provisional.
+- Se añadieron navegación por anclas, indicador de progreso de lectura, estilos responsive, foco visible y respeto por prefers-reduced-motion.
+- Se actualizó el workflow para desplegar automáticamente en cada push a main y conservar la ejecución manual.
+- La API del repositorio informa has_pages: true. GitHub Actions ha iniciado la ejecución asociada al nuevo commit; el job de build aparece correcto y el job de deploy todavía está en cola en la última consulta.
+
+### Decisiones
+- La web v0.1 es un prototipo de contenido y recorrido, no una traducción fiel del Figma todavía no revisado.
+- No se incluyen datos personales concretos de Spotify, Pinterest o Instagram hasta verificarlos.
+- La publicación solo se marcará como completada después de un despliegue exitoso y de comprobar la URL pública.
+
+### Pendientes
+- Verificar el resultado final de GitHub Actions y la carga de GitHub Pages.
+- Contrastar composición, tipografía, ritmo y contenido con el archivo Figma real.
+- Añadir capturas y pruebas de comprensión a las fichas 01 y 02.
+- Generar el PDF final con enlace a la web y al repositorio.
+
+---
+
+
 ## 2026-11-25 — Adaptación al enunciado actualizado
 
 ### Requisitos incorporados
