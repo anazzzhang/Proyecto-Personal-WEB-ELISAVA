@@ -2,6 +2,53 @@
 
 Este archivo mantiene el historial cronológico del trabajo. Añadir las entradas nuevas al principio, sin borrar ni reescribir entradas anteriores salvo corrección solicitada.
 
+## 2026-11-24 — Documentación del proceso y fichas de scroll
+
+### Objetivo
+Adaptar el repositorio al enunciado de la entrega: compartir el proceso de construcción de la web, documentar el loop de cada scroll, mantenerlo en GitHub y preparar la publicación en GitHub Pages.
+
+### Trabajo realizado
+- Se ha recuperado el contexto de las conversaciones sobre el proyecto de identidad digital.
+- Se ha concretado la memoria del proyecto alrededor de *ECHOES OF WHO I WAS*.
+- Se ha definido una estructura provisional de siete scrolls, basada en la organización explorada en las conversaciones.
+- Se ha preparado una metodología de iteración repetible y una ficha para cada scroll.
+- Se ha preparado un workflow de GitHub Actions para desplegar la carpeta raíz en GitHub Pages.
+- Se ha revisado el estado del repositorio y se ha comprobado que GitHub Pages todavía no estaba habilitado (`has_pages: false`).
+
+### Decisiones confirmadas
+- Mantener este repositorio como repositorio principal del proyecto web.
+- Documentar el proceso aunque la web todavía no esté terminada.
+- Separar decisiones confirmadas, hipótesis, propuestas y pruebas pendientes.
+- No sustituir el HTML/CSS/JS de ejemplo por una web inventada ni presentar el placeholder como resultado final.
+
+### Propuestas e hipótesis
+- La secuencia Introduction / Research question / Digital traces / References / Narrative / Findings / Project concept se utiliza como mapa provisional de scrolls.
+- El loop de cada scroll se registra como objetivo → contenido → diseño/interacción → prueba → observación → iteración.
+- La publicación se realizará desde la rama `main` y la carpeta raíz, una vez configurado GitHub Pages con GitHub Actions.
+
+### Archivos creados o modificados
+- Actualizado `README.md`.
+- Actualizado `memoria.md`.
+- Actualizado `instruction.md`.
+- Actualizado `log.md`.
+- Creado `contexto.md`.
+- Creados `documentacion/proceso.md` y `documentacion/fichas-de-scroll.md`.
+- Creado `.github/workflows/pages.yml`.
+
+### Pendientes y bloqueos
+- Completar y validar el brief en `contexto.md` con el enunciado íntegro y cualquier feedback docente.
+- Completar las fichas con capturas reales, enlaces a frames de Figma, decisiones visuales y pruebas de cada scroll.
+- Revisar los datos personales de Spotify, Pinterest e Instagram antes de hacerlos públicos.
+- Desarrollar la web real: el HTML actual sigue siendo una plantilla mínima.
+- Activar GitHub Pages desde Settings → Pages → Build and deployment → GitHub Actions y verificar el primer deployment.
+
+### Próximos pasos
+1. Revisar las fichas y corregir la secuencia de scrolls según el diseño real en Figma.
+2. Documentar la primera iteración visual de cada scroll con evidencia.
+3. Implementar progresivamente los scrolls en HTML/CSS/JS.
+4. Activar GitHub Pages y comprobar la URL publicada.
+5. Registrar cada iteración y prueba en este log.
+ 
 ## 2026-11-04 — Configuración inicial de continuidad
 
 ### Trabajo realizado
