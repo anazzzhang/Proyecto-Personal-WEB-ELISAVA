@@ -50,14 +50,14 @@ El enunciado compartido pide:
 - Publicar la web en GitHub Pages.
 - Priorizar que el proceso se pueda seguir y repetir, no que la web esté terminada.
 
-La documentación de proceso se encuentra en `documentacion/proceso.md` y las fichas en `documentacion/fichas-de-scroll.md`.
+La documentación de proceso se encuentra en `documentacion/proceso.md` y las fichas en `documentacion/fichas-de-scroll.md`. El brief y estado vigente se centralizan en `CONTEXT.md`; las instrucciones operativas, en `INSTRUCTIONS.md`.
 
 ## Estado técnico observado el 2026-11-25
 - Se ha sustituido la plantilla genérica por un primer prototipo narrativo responsive v0.1 en `index.html`, `style.css` y `script.js`.
 - El prototipo contiene introducción, pregunta de investigación y tres fuentes de rastros digitales (Spotify, Pinterest e Instagram), sin incluir métricas personales no verificadas.
 - El prototipo es provisional y debe contrastarse con el diseño real de Figma antes de considerarlo la versión visual definitiva.
 - La API del repositorio ya informa `has_pages: true`; la activación de Pages parece estar habilitada.
-- Se prepara un workflow de GitHub Actions para publicar la carpeta raíz cuando Pages se configure.
+- El workflow de GitHub Actions está configurado para publicar la carpeta raíz.
 - El workflow `Deploy static site to GitHub Pages` terminó con `success` (ejecución 45506876303). La publicación se ha desplegado; falta la comprobación visual manual de la URL pública.
 
 ## Principios de continuidad
