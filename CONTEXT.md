@@ -78,7 +78,7 @@ La documentación debe distinguir entre trabajo conceptual, prototipo, implement
 - **Provisional:** el título *ECHOES OF WHO I WAS* y la secuencia de siete scrolls.
 - **Pendiente:** cerrar la pregunta de investigación, validar los contenidos de cada scroll, incorporar referencias verificadas, definir la dirección visual final y completar las fichas con evidencia real.
 - **Técnico:** se ha creado una primera versión responsive y navegable (v0.1) con introducción, pregunta de investigación y presentación provisional de Spotify, Pinterest e Instagram. Es un prototipo de contenido y recorrido, pendiente de contrastar con Figma; no se presenta como diseño final.
-- **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar el workflow. No existe todavía una publicación verificada.
+- **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar el workflow. El workflow `Deploy static site to GitHub Pages` terminó con `success` en la ejecución 45506876303. El despliegue está completado; queda una comprobación visual manual de la URL pública en navegador.
 
 ## Criterios de evaluación del proceso
 - Trazabilidad: que se entienda la evolución.
