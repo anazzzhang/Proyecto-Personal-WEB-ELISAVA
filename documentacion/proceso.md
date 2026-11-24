@@ -6,13 +6,13 @@ Este documento explica cómo se construye *ECHOES OF WHO I WAS* y cómo repetir 
 
 La web explora la identidad personal a través de rastros digitales de Spotify, Pinterest e Instagram. El recorrido se plantea como una narración visual y editorial sobre memoria, nostalgia, cambios de gustos y selección algorítmica.
 
-El concepto, la estructura provisional y el estado actual están descritos en [contexto.md](../contexto.md).
+El concepto, la estructura provisional y el estado actual están descritos en [CONTEXT.md](../CONTEXT.md).
 
 ## 2. Organización del proyecto
 
 | Archivo | Función |
 |---|---|
-| `contexto.md` | Brief, objetivo, preguntas y estado actual |
+| `CONTEXT.md` | Brief, objetivo, preguntas y estado actual |
 | `memoria.md` | Decisiones estables del proyecto |
 | `log.md` | Historial cronológico de sesiones |
 | `documentacion/fichas-de-scroll.md` | Loop de diseño y construcción de cada scroll |
@@ -92,18 +92,7 @@ Ejemplos de mensajes de commit:
 
 ## 8. Publicación en GitHub Pages
 
-El workflow `.github/workflows/pages.yml` está preparado para publicar el contenido de la carpeta raíz. La primera activación debe hacerse una sola vez:
-
-1. Abrir el repositorio en GitHub.
-2. Ir a **Settings → Pages**.
-3. En **Build and deployment**, seleccionar **GitHub Actions** como fuente.
-4. Abrir la pestaña **Actions**.
-5. Ejecutar manualmente **Deploy static site to GitHub Pages** mediante **Run workflow**.
-6. Comprobar que el workflow termina correctamente.
-7. Abrir la URL que GitHub Pages muestre en Settings → Pages.
-8. Verificar que la web carga y que los recursos enlazados funcionan.
-
-**Estado actual:** el primer intento de configuración falló porque GitHub Pages aún no estaba habilitado en el repositorio. El workflow se ha dejado en ejecución manual para no repetir el fallo hasta completar el paso de Settings. La publicación no se considera completada hasta verificar el despliegue y la URL.
+El workflow `.github/workflows/pages.yml` publica el contenido de la carpeta raíz mediante GitHub Actions. La ejecución 45506876303 terminó correctamente. Para verificar el resultado, abrir la URL que aparece en Settings → Pages y comprobar carga, enlaces, responsive e interacciones.
 
 ## 9. Criterio de cierre de un scroll
 
