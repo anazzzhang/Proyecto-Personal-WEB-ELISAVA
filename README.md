@@ -17,12 +17,12 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 
 - [x] Base documental: SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md (se mantienen también los archivos de trabajo en minúsculas para continuidad).
 - [x] Fichas de los dos primeros scrolls trabajados a nivel conceptual, con responsable de decisión y verificación; la validación visual y externa queda indicada como pendiente.
-- [ ] Web desplegada y comprobada en GitHub Pages.
+- [ ] Web desplegada y comprobada en GitHub Pages (workflow activado; ejecución todavía en curso en la última comprobación).
 - [ ] PDF final con enlaces a la web y al repositorio.
 
 ## Contenido del repositorio
 
-- `index.html`, `style.css`, `script.js`: punto de partida técnico de la web.
+- `index.html`, `style.css`, `script.js`: prototipo narrativo responsive v0.1; pendiente de contrastar con Figma.
 - `contexto.md`: brief y estado del proyecto.
 - `memoria.md`: decisiones estables y contexto que debe conservarse.
 - `log.md`: registro cronológico de sesiones.
