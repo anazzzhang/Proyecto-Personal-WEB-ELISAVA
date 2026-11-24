@@ -23,13 +23,13 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 ## Contenido del repositorio
 
 - `index.html`, `style.css`, `script.js`: prototipo narrativo responsive v0.1; pendiente de contrastar con Figma.
-- `CONTEXT.md`: brief y estado del proyecto.
-- `memoria.md`: decisiones estables y contexto que debe conservarse.
-- `log.md`: registro cronológico de sesiones.
-- `SOUL.md`, `criterio.md`, `INSTRUCTIONS.md`: criterios de colaboración y continuidad.
+- `SOUL.md`: criterio de colaboración, prioridades y rigor.
+- `CONTEXT.md`: brief, concepto, materiales y estado actual.
+- `INSTRUCTIONS.md`: procedimiento de trabajo y continuidad.
+- `LOG.md`: único registro cronológico de sesiones.
 - `documentacion/proceso.md`: metodología para documentar y repetir el proceso.
 - `documentacion/fichas-de-scroll.md`: fichas de loop de cada scroll.
-- `.github/workflows/pages.yml`: workflow preparado para publicar el sitio con GitHub Pages.
+- `.github/workflows/pages.yml`: workflow para publicar el sitio con GitHub Pages.
 
 ## Estructura de trabajo provisional
 
@@ -45,13 +45,13 @@ Esta secuencia recoge la estructura que se ha explorado hasta ahora. No es todav
 
 ## Cómo seguir el proceso
 
-1. Consultar `CONTEXT.md` y `memoria.md` antes de tomar decisiones.
-2. Revisar la ficha del scroll que se vaya a trabajar.
-3. Registrar objetivo, contenido, interacción, transición y prueba.
-4. Diseñar y probar el scroll en Figma.
-5. Trasladar la iteración validada a HTML, CSS y JavaScript.
-6. Anotar qué ha cambiado y por qué en `log.md`.
-7. Actualizar la ficha con el resultado real, capturas y pendientes.
+1. Leer `SOUL.md`, `CONTEXT.md` e `INSTRUCTIONS.md`.
+2. Consultar la entrada más reciente de `LOG.md`.
+3. Revisar la ficha del scroll que se vaya a trabajar.
+4. Registrar objetivo, contenido, interacción, transición y prueba.
+5. Diseñar y probar el scroll en Figma.
+6. Trasladar la iteración decidida a HTML, CSS y JavaScript.
+7. Actualizar la ficha y añadir el cambio a `LOG.md`.
 
 Consulta [el proceso y las fichas de scroll](documentacion/proceso.md).
 
