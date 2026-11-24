@@ -19,7 +19,7 @@ El concepto, la estructura provisional y el estado actual están descritos en [c
 | `index.html` | Estructura y contenido semántico |
 | `style.css` | Sistema visual, composición y responsive |
 | `script.js` | Interacciones y comportamiento |
-| `.github/workflows/pages.yml` | Publicación automática mediante GitHub Pages |
+| `.github/workflows/pages.yml` | Publicación mediante GitHub Pages |
 
 ## 3. Método: un loop por scroll
 
@@ -84,17 +84,18 @@ Ejemplos de mensajes de commit:
 
 ## 7. Publicación en GitHub Pages
 
-El workflow de `.github/workflows/pages.yml` está preparado para publicar el contenido de la carpeta raíz cuando se actualice `main`.
+El workflow `.github/workflows/pages.yml` está preparado para publicar el contenido de la carpeta raíz. La primera activación debe hacerse una sola vez:
 
-Para activar la publicación por primera vez:
 1. Abrir el repositorio en GitHub.
 2. Ir a **Settings → Pages**.
 3. En **Build and deployment**, seleccionar **GitHub Actions** como fuente.
-4. Volver a la pestaña **Actions** y comprobar que el workflow finaliza correctamente.
-5. Abrir la URL que GitHub Pages muestre en Settings → Pages.
-6. Verificar que la web carga y que los recursos enlazados funcionan.
+4. Abrir la pestaña **Actions**.
+5. Ejecutar manualmente **Deploy static site to GitHub Pages** mediante **Run workflow**.
+6. Comprobar que el workflow termina correctamente.
+7. Abrir la URL que GitHub Pages muestre en Settings → Pages.
+8. Verificar que la web carga y que los recursos enlazados funcionan.
 
-**Estado actual:** Pages todavía no estaba habilitado en la última revisión del repositorio. Por tanto, el workflow preparado no equivale a una publicación completada.
+**Estado actual:** el primer intento de configuración falló porque GitHub Pages aún no estaba habilitado en el repositorio. El workflow se ha dejado en ejecución manual para no repetir el fallo hasta completar el paso de Settings. La publicación no se considera completada hasta verificar el despliegue y la URL.
 
 ## 8. Criterio de cierre de un scroll
 
