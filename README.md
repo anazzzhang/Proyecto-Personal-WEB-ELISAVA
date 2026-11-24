@@ -13,6 +13,13 @@ La propuesta explora cómo los rastros que dejamos en plataformas digitales part
 
 El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y repetir: documentar las decisiones, las iteraciones de cada scroll, las pruebas y los cambios entre diseño y desarrollo.
 
+## Checklist de entrega
+
+- [x] Base documental: SOUL.md, CONTEXT.md, INSTRUCTIONS.md y LOG.md (se mantienen también los archivos de trabajo en minúsculas para continuidad).
+- [x] Fichas de los dos primeros scrolls trabajados a nivel conceptual, con responsable de decisión y verificación; la validación visual y externa queda indicada como pendiente.
+- [ ] Web desplegada y comprobada en GitHub Pages.
+- [ ] PDF final con enlaces a la web y al repositorio.
+
 ## Contenido del repositorio
 
 - `index.html`, `style.css`, `script.js`: punto de partida técnico de la web.
@@ -50,7 +57,7 @@ Consulta [el proceso y las fichas de scroll](documentacion/proceso.md).
 
 ## Publicación
 
-El workflow de GitHub Actions está preparado para desplegar la carpeta raíz, pero la primera ejecución requiere activar GitHub Pages desde los ajustes del repositorio. En **Settings → Pages → Build and deployment**, selecciona **GitHub Actions** como fuente. Después, ejecuta manualmente el workflow **Deploy static site to GitHub Pages** desde la pestaña **Actions**.
+El workflow de GitHub Actions está preparado para desplegar la carpeta raíz, pero requiere activar GitHub Pages desde los ajustes del repositorio. En **Settings → Pages → Build and deployment**, selecciona **GitHub Actions** como fuente. Después, ejecuta manualmente el workflow **Deploy static site to GitHub Pages** desde la pestaña **Actions**.
 
 El primer intento automático no pudo completar el paso de configuración de Pages, ya que el sitio todavía no estaba habilitado. El workflow queda ahora en modo manual para evitar ejecuciones fallidas hasta completar la configuración. La publicación solo se considerará realizada cuando el workflow termine correctamente y la URL cargue.
 
