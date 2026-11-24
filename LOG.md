@@ -11,12 +11,12 @@ Copia de consulta para la entrega. El registro cronológico editable se mantiene
 - Se desarrollaron introducción, pregunta de investigación, sección de rastros digitales y cierre provisional.
 - Se añadieron navegación por anclas, indicador de progreso de lectura, estilos responsive, foco visible y respeto por prefers-reduced-motion.
 - Se actualizó el workflow para desplegar automáticamente en cada push a main y conservar la ejecución manual.
-- La API del repositorio informa has_pages: true. GitHub Actions ha iniciado la ejecución asociada al nuevo commit; el job de build aparece correcto y el job de deploy todavía está en cola en la última consulta.
+- La API del repositorio informa has_pages: true. La ejecución `Deploy static site to GitHub Pages` (45506876303) terminó con `success`; el job de deploy también figura completado correctamente.
 
 ### Decisiones
 - La web v0.1 es un prototipo de contenido y recorrido, no una traducción fiel del Figma todavía no revisado.
 - No se incluyen datos personales concretos de Spotify, Pinterest o Instagram hasta verificarlos.
-- La publicación solo se marcará como completada después de un despliegue exitoso y de comprobar la URL pública.
+- El despliegue de GitHub Actions está completado correctamente. Falta abrir la URL pública en un navegador normal para confirmar visualmente la carga desde el dispositivo de la autora.
 
 ### Pendientes
 - Verificar el resultado final de GitHub Actions y la carga de GitHub Pages.
@@ -37,7 +37,7 @@ Copia de consulta para la entrega. El registro cronológico editable se mantiene
 
 ### Estado y bloqueos
 - La web sigue siendo una plantilla HTML/CSS/JS de ejemplo; no se ha sustituido por un diseño inventado.
-- GitHub Pages no se considera publicado hasta que el workflow termine correctamente y la URL cargue.
+- GitHub Pages: workflow completado correctamente; comprobación visual manual de la URL todavía pendiente.
 - Falta exportar/compartir el diseño de Figma para registrar composición, decisiones visuales y pruebas reales.
 - Falta generar el PDF final una vez que exista una URL publicada y verificada.
 
