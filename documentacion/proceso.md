@@ -6,15 +6,16 @@ Este documento explica cómo se construye *ECHOES OF WHO I WAS* y cómo repetir 
 
 La web explora la identidad personal a través de rastros digitales de Spotify, Pinterest e Instagram. El recorrido se plantea como una narración visual y editorial sobre memoria, nostalgia, cambios de gustos y selección algorítmica.
 
-El concepto, la estructura provisional y el estado actual están descritos en [CONTEXT.md](../CONTEXT.md).
+El concepto, la estructura provisional y el estado actual están descritos en [CONTEXT.md](../CONTEXT.md). Los criterios de colaboración se encuentran en [SOUL.md](../SOUL.md).
 
 ## 2. Organización del proyecto
 
 | Archivo | Función |
 |---|---|
+| `SOUL.md` | Criterios de colaboración, prioridades y rigor |
 | `CONTEXT.md` | Brief, objetivo, preguntas y estado actual |
-| `memoria.md` | Decisiones estables del proyecto |
-| `log.md` | Historial cronológico de sesiones |
+| `INSTRUCTIONS.md` | Procedimiento operativo de trabajo |
+| `LOG.md` | Historial cronológico de sesiones |
 | `documentacion/fichas-de-scroll.md` | Loop de diseño y construcción de cada scroll |
 | `index.html` | Estructura y contenido semántico |
 | `style.css` | Sistema visual, composición y responsive |
@@ -41,7 +42,7 @@ Cada scroll se trabaja como una unidad con una intención narrativa concreta. El
 6. **Evaluar:** anotar qué funciona, qué no y qué evidencia lo demuestra.
 7. **Iterar:** conservar, modificar o descartar la propuesta y explicar el motivo.
 8. **Implementar:** trasladar la versión decidida a HTML, CSS y JavaScript.
-9. **Registrar:** actualizar la ficha del scroll y añadir el cambio a `log.md`.
+9. **Registrar:** actualizar la ficha del scroll y añadir el cambio a `LOG.md`.
 
 ### Plantilla breve para cada vuelta
 
@@ -80,7 +81,7 @@ Las evidencias deben ser reales y estar fechadas. Si todavía no existen, dejar 
 
 - Hacer commits pequeños y descriptivos, relacionados con una mejora concreta.
 - Actualizar la ficha del scroll en la misma fase en que se realiza el cambio.
-- Añadir al `log.md` una entrada con objetivo, trabajo, decisiones, archivos y próximos pasos.
+- Añadir al `LOG.md` una entrada con objetivo, trabajo, decisiones, archivos y próximos pasos.
 - No borrar iteraciones anteriores: explicar qué cambió y por qué.
 - Diferenciar decisiones confirmadas de propuestas y pruebas pendientes.
 
