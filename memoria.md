@@ -52,12 +52,13 @@ El enunciado compartido pide:
 
 La documentación de proceso se encuentra en `documentacion/proceso.md` y las fichas en `documentacion/fichas-de-scroll.md`.
 
-## Estado técnico observado el 2026-11-24
-- El repositorio contiene una estructura HTML/CSS/JS mínima de inicio.
-- `index.html` todavía muestra contenido de ejemplo; no representa la web conceptual final.
-- GitHub Pages no estaba habilitado en el estado consultado (`has_pages: false`).
+## Estado técnico observado el 2026-11-25
+- Se ha sustituido la plantilla genérica por un primer prototipo narrativo responsive v0.1 en `index.html`, `style.css` y `script.js`.
+- El prototipo contiene introducción, pregunta de investigación y tres fuentes de rastros digitales (Spotify, Pinterest e Instagram), sin incluir métricas personales no verificadas.
+- El prototipo es provisional y debe contrastarse con el diseño real de Figma antes de considerarlo la versión visual definitiva.
+- La API del repositorio ya informa `has_pages: true`; la activación de Pages parece estar habilitada.
 - Se prepara un workflow de GitHub Actions para publicar la carpeta raíz cuando Pages se configure.
-- No afirmar que la web está publicada hasta verificar un despliegue correcto.
+- El workflow de Actions se ha disparado tras el cambio de web; no afirmar que está publicada hasta verificar que el despliegue termina correctamente y la URL carga.
 
 ## Principios de continuidad
 - Diferenciar hechos confirmados, hipótesis, propuestas y pendientes.
