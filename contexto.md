@@ -64,7 +64,7 @@ En cada vuelta se registra qué se quería comprobar, qué se modificó, qué ev
 - **Provisional:** el título *ECHOES OF WHO I WAS* y la secuencia de siete scrolls.
 - **Pendiente:** cerrar la pregunta de investigación, validar los contenidos de cada scroll, incorporar referencias verificadas, definir la dirección visual final y completar las fichas con evidencia real.
 - **Técnico:** el repositorio conserva una plantilla mínima HTML/CSS/JS; todavía no contiene la web final.
-- **Publicación:** se ha preparado el workflow de GitHub Pages, pero hay que activar Pages en los ajustes del repositorio y verificar el primer despliegue.
+- **Publicación:** se ha preparado un workflow de GitHub Actions. El primer intento falló en el paso de configuración de Pages porque Pages aún no estaba habilitado. Hay que seleccionar GitHub Actions en Settings → Pages y ejecutar manualmente el workflow. No existe todavía una publicación verificada.
 
 ## Criterios de evaluación del proceso
 - Trazabilidad: que se entienda la evolución.
