@@ -1,5 +1,25 @@
 # Registro de sesiones
 
+## 2026-11-25 — Unificación de documentos de contexto e instrucciones
+
+### Cambios realizados
+- Se eligió `CONTEXT.md` como documento único de contexto, porque es el nombre exacto solicitado en el enunciado.
+- Se integró en `CONTEXT.md` el contenido útil de `contexto.md`, eliminando la nota que indicaba mantener dos versiones.
+- Se eligió `INSTRUCTIONS.md` como documento único de instrucciones, porque es el nombre exacto solicitado en el enunciado.
+- Se integró y reorganizó en español el procedimiento que estaba en `instruction.md`.
+- Se actualizaron los enlaces y referencias internas para que apunten a los documentos canónicos.
+- Se eliminarán `contexto.md` e `instruction.md` una vez guardadas las versiones unificadas.
+
+### Decisión
+A partir de ahora, `CONTEXT.md` y `INSTRUCTIONS.md` son las únicas versiones vigentes de esos documentos. No crear copias en minúsculas.
+
+### Pendiente
+Comprobar que no quedan referencias activas a los nombres antiguos y que los dos archivos antiguos se han eliminado.
+
+---
+
+# Registro de sesiones
+
 ## 2026-11-25 — Primer prototipo web y activación del despliegue
 
 ### Trabajo realizado
