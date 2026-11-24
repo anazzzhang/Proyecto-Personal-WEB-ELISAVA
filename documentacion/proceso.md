@@ -118,4 +118,4 @@ Un scroll puede pasar a implementación cuando:
 
 ## 10. Estado y próximos pasos
 
-La estructura de siete scrolls es provisional. El siguiente paso es contrastarla con el diseño real en Figma, añadir capturas y completar cada ficha con decisiones visuales específicas. Después se implementarán y probarán progresivamente los scrolls.
+La estructura de siete scrolls es provisional. Existe una primera versión web responsive v0.1 que sirve como prototipo navegable de contenido y recorrido; todavía debe contrastarse con el diseño real en Figma. El siguiente paso es añadir capturas, completar las fichas con decisiones visuales específicas y probar la comprensión con otra persona.
