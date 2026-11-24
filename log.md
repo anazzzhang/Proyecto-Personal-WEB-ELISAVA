@@ -8,7 +8,7 @@
 - Se eligió `INSTRUCTIONS.md` como documento único de instrucciones, porque es el nombre exacto solicitado en el enunciado.
 - Se integró y reorganizó en español el procedimiento que estaba en `instruction.md`.
 - Se actualizaron los enlaces y referencias internas para que apunten a los documentos canónicos.
-- Se eliminarán `contexto.md` e `instruction.md` una vez guardadas las versiones unificadas.
+- Se eliminaron `contexto.md` e `instruction.md` después de guardar y verificar las versiones unificadas.
 
 ### Decisión
 A partir de ahora, `CONTEXT.md` y `INSTRUCTIONS.md` son las únicas versiones vigentes de esos documentos. No crear copias en minúsculas.
