@@ -1,21 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi proyecto</title>
-  <!-- El nombre tiene que coincidir con el del archivo: style.css -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="ECHOES OF WHO I WAS: un autorretrato digital a través de la memoria y los rastros que dejamos en las plataformas.">
+  <meta name="theme-color" content="#f2efe8">
+  <title>ECHOES OF WHO I WAS — A digital self-portrait</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress"></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="ECHOES OF WHO I WAS, inicio">ECHOES<span>—</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#question">La pregunta</a>
+      <a href="#traces">Los rastros</a>
+      <a href="#about">El proyecto</a>
+    </nav>
+    <span class="edition">PROYECTO PERSONAL · ELISAVA · 2026</span>
+  </header>
 
-  <h1>El título de mi proyecto</h1>
-  <p>Una frase que explica de qué trata.</p>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="dot"></span> UN AUTORRETRATO DIGITAL</p>
+      <h1 id="hero-title">ECHOES<br><em>OF WHO</em><br>I WAS<span class="asterisk">*</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-note">Un viaje por mis rastros digitales para descubrir quién fui, entender quién soy y reconocer en qué me he convertido.</p>
+        <a class="scroll-cue" href="#question"><span>DESLIZA PARA EXPLORAR</span><span aria-hidden="true">↓</span></a>
+      </div>
+      <span class="side-note">IDENTIDAD / MEMORIA / DATOS</span>
+    </section>
 
-  <button id="boton">Ver mi pregunta</button>
-  <p id="texto" hidden>Aquí va mi pregunta de investigación.</p>
+    <section class="chapter question" id="question" aria-labelledby="question-title">
+      <div class="section-index"><span>01</span><span>LA PREGUNTA</span></div>
+      <div class="question-content">
+        <p class="eyebrow">UNA INVESTIGACIÓN PERSONAL</p>
+        <h2 id="question-title">¿Y si las plataformas recordaran versiones de mí que yo ya he olvidado?</h2>
+        <p class="intro-copy">Cada búsqueda, canción guardada o imagen que nos detiene deja un pequeño rastro. Con el tiempo, esos fragmentos forman un archivo involuntario: una memoria digital que conserva intereses, obsesiones y etapas que quizá ya no reconocemos como propias.</p>
+        <p class="small-copy">Este proyecto parte de una pregunta abierta: ¿cuánto de nuestra identidad permanece en lo que dejamos online y cuánto depende de lo que decidimos recordar?</p>
+      </div>
+      <span class="chapter-mark" aria-hidden="true">01</span>
+    </section>
 
-  <!-- El JavaScript va al final, cuando la página ya está cargada -->
-  <script src="script.js"></script>
+    <section class="chapter traces" id="traces" aria-labelledby="traces-title">
+      <div class="section-index"><span>02</span><span>LOS RASTROS</span></div>
+      <div class="traces-heading">
+        <p class="eyebrow">MI ARCHIVO DIGITAL</p>
+        <h2 id="traces-title">Tres ventanas.<br><em>Fragmentos de mí.</em></h2>
+        <p>Observar lo que las plataformas conservan para reconstruir una historia que no siempre recordamos de la misma manera.</p>
+      </div>
+      <div class="trace-list">
+        <article class="trace-item">
+          <span class="trace-number">01</span>
+          <div><h3>Spotify</h3><p>Lo que escuchaba. Canciones, repeticiones y cambios de gusto como una banda sonora de distintas etapas.</p></div>
+          <span class="trace-tag">ESCUCHA</span>
+        </article>
+        <article class="trace-item">
+          <span class="trace-number">02</span>
+          <div><h3>Pinterest</h3><p>Lo que guardaba. Imágenes, búsquedas y tableros como un mapa indirecto de intereses e imaginarios.</p></div>
+          <span class="trace-tag">IMAGEN</span>
+        </article>
+        <article class="trace-item">
+          <span class="trace-number">03</span>
+          <div><h3>Instagram</h3><p>Lo que aparecía. Un flujo seleccionado por algoritmos que también influye en aquello que vemos y deseamos.</p></div>
+          <span class="trace-tag">ALGORITMO</span>
+        </article>
+      </div>
+      <p class="data-note"><span>*</span> Los datos personales concretos y las capturas se incorporarán después de comprobar su origen, contexto y privacidad.</p>
+    </section>
+
+    <section class="closing" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">SOBRE ESTE PROYECTO</p>
+      <h2 id="about-title">No somos un archivo<br>cerrado<span>.</span></h2>
+      <p>Una exploración visual sobre identidad, memoria y huella digital. La web se construye por iteraciones: cada scroll se investiga, se diseña, se prueba y se revisa.</p>
+      <div class="status-line"><span class="status-dot"></span> PROTOTIPO EN DESARROLLO <span>·</span> VERSIÓN 0.1</div>
+      <a class="back-top" href="#top">VOLVER AL INICIO ↑</a>
+    </section>
+  </main>
+  <footer><span>ANA ZHANG</span><span>PROYECTO PERSONAL — ELISAVA</span><span>2026</span></footer>
 </body>
 </html>
