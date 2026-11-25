@@ -119,3 +119,32 @@ if (heroTitle && window.matchMedia('(pointer:fine)').matches && !window.matchMed
     heroTitle.style.setProperty('--mag-y', '0px');
   });
 }
+
+
+/* A soft spotlight follows the pointer, like searching through digital memories. */
+const cursorLight = document.querySelector('#cursor-light');
+const finePointer = window.matchMedia('(pointer:fine)').matches;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (cursorLight && finePointer && !reduceMotion) {
+  let lightFrame = 0;
+  let pointerX = window.innerWidth / 2;
+  let pointerY = window.innerHeight / 2;
+  const moveLight = event => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    if (!lightFrame) {
+      lightFrame = window.requestAnimationFrame(() => {
+        cursorLight.style.transform = `translate3d(${pointerX}px,${pointerY}px,0) translate3d(-50%,-50%,0)`;
+        lightFrame = 0;
+      });
+    }
+    document.body.classList.add('cursor-active');
+  };
+  window.addEventListener('pointermove', moveLight, { passive: true });
+  document.documentElement.addEventListener('mouseleave', () => {
+    document.body.classList.remove('cursor-active');
+  });
+  document.documentElement.addEventListener('mouseenter', () => {
+    document.body.classList.add('cursor-active');
+  });
+}
