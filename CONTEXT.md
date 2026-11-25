@@ -75,7 +75,7 @@ La documentación debe distinguir entre trabajo conceptual, prototipo, implement
 - **Confirmado:** concepto general, plataformas de rastros digitales e intención de una web larga.
 - **Provisional:** título de trabajo y secuencia de siete scrolls.
 - **Pendiente:** cerrar la pregunta de investigación, validar los contenidos de cada scroll, incorporar referencias verificadas, definir la dirección visual final y completar las fichas con evidencia real.
-- **Técnico:** existe una primera versión responsive y navegable (v0.1) con introducción, pregunta de investigación y presentación provisional de Spotify, Pinterest e Instagram. Es un prototipo de contenido y recorrido, pendiente de contrastar con Figma; no se presenta como diseño final.
+- **Técnico:** existe una segunda iteración responsive (v0.2) con dirección editorial monocromática, recorrido ampliado, composiciones gráficas abstractas para las plataformas, modo claro/oscuro, progreso de lectura, navegación activa, revelado al scroll y tarjetas interactivas. Es una propuesta implementada en código, todavía pendiente de revisión visual manual, pruebas y contraste con Figma.
 - **Publicación:** GitHub Actions completó correctamente el workflow `Deploy static site to GitHub Pages` (ejecución 45506876303). Queda pendiente la comprobación visual manual de la URL pública en navegador.
 
 ## Criterios de evaluación del proceso
