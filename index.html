@@ -1,84 +1,157 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ECHOES OF WHO I WAS: un autorretrato digital a través de la memoria y los rastros que dejamos en las plataformas.">
-  <meta name="theme-color" content="#f2efe8">
+  <meta name="description" content="ECHOES OF WHO I WAS: un autorretrato digital sobre identidad, memoria y rastros digitales.">
+  <meta name="theme-color" content="#f4f4f1">
   <title>ECHOES OF WHO I WAS — A digital self-portrait</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
-  <div class="reading-progress" aria-hidden="true"><span id="progress"></span></div>
+  <div class="progress-track" aria-hidden="true"><span id="progress"></span></div>
+
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="ECHOES OF WHO I WAS, inicio">ECHOES<span>—</span></a>
+    <a class="wordmark" href="#top" aria-label="Echoes of who I was, inicio">ECHOES<span>®</span></a>
     <nav aria-label="Navegación principal">
-      <a href="#question">La pregunta</a>
-      <a href="#traces">Los rastros</a>
-      <a href="#about">El proyecto</a>
+      <a href="#question">01 / Pregunta</a>
+      <a href="#traces">02 / Rastros</a>
+      <a href="#archive">03 / Archivo</a>
+      <a href="#ending">04 / Cierre</a>
     </nav>
-    <span class="edition">PROYECTO PERSONAL · ELISAVA · 2026</span>
+    <div class="header-tools">
+      <span class="edition">ELISAVA · 2026</span>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">MODO OSCURO</span>
+      </button>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <p class="eyebrow"><span class="dot"></span> UN AUTORRETRATO DIGITAL</p>
-      <h1 id="hero-title">ECHOES<br><em>OF WHO</em><br>I WAS<span class="asterisk">*</span></h1>
-      <div class="hero-bottom">
-        <p class="hero-note">Un viaje por mis rastros digitales para descubrir quién fui, entender quién soy y reconocer en qué me he convertido.</p>
-        <a class="scroll-cue" href="#question"><span>DESLIZA PARA EXPLORAR</span><span aria-hidden="true">↓</span></a>
+    <section class="hero" id="top">
+      <div class="hero-meta"><span>UN AUTORRETRATO DIGITAL</span><span>41°23' N — 02°10' E</span></div>
+      <div class="hero-title-wrap">
+        <p class="hero-kicker">¿QUÉ QUEDA DE NOSOTROS EN INTERNET?</p>
+        <h1 class="hero-title"><span>ECHOES</span><span class="title-middle"><i>OF WHO</i><b>01—∞</b></span><span>I WAS<span class="title-star">*</span></span></h1>
+        <div class="hero-stamp" aria-hidden="true"><span>PERSONAL</span><strong>///</strong><span>DATA<br>DIARY</span></div>
       </div>
-      <span class="side-note">IDENTIDAD / MEMORIA / DATOS</span>
+      <div class="hero-foot">
+        <p>Un viaje por mis rastros digitales para descubrir quién fui, entender quién soy y reconocer en qué me he convertido.</p>
+        <a class="scroll-link" href="#question"><span>EMPIEZA EL RECORRIDO</span><b>↓</b></a>
+        <span class="vertical-note">IDENTIDAD · MEMORIA · HUELLA DIGITAL</span>
+      </div>
+      <div class="hero-index">FIG. 001 <span>—</span> A STUDY OF THE SELF</div>
     </section>
 
-    <section class="chapter question" id="question" aria-labelledby="question-title">
-      <div class="section-index"><span>01</span><span>LA PREGUNTA</span></div>
-      <div class="question-content">
-        <p class="eyebrow">UNA INVESTIGACIÓN PERSONAL</p>
-        <h2 id="question-title">¿Y si las plataformas recordaran versiones de mí que yo ya he olvidado?</h2>
-        <p class="intro-copy">Cada búsqueda, canción guardada o imagen que nos detiene deja un pequeño rastro. Con el tiempo, esos fragmentos forman un archivo involuntario: una memoria digital que conserva intereses, obsesiones y etapas que quizá ya no reconocemos como propias.</p>
-        <p class="small-copy">Este proyecto parte de una pregunta abierta: ¿cuánto de nuestra identidad permanece en lo que dejamos online y cuánto depende de lo que decidimos recordar?</p>
+    <section class="question section-pad" id="question">
+      <div class="section-top"><span>01 / LA PREGUNTA</span><span>OBSERVAR PARA RECORDAR</span></div>
+      <div class="question-grid">
+        <div class="question-side reveal">
+          <span class="big-index">01</span>
+          <p class="micro-label">UNA INVESTIGACIÓN PERSONAL</p>
+          <div class="orbit-mark" aria-hidden="true"><span></span><span></span><span></span><b>?</b></div>
+        </div>
+        <div class="question-main reveal">
+          <h2>¿Y si las plataformas recordaran versiones de mí que <em>yo ya he olvidado?</em></h2>
+          <div class="question-copy">
+            <p>Cada búsqueda, canción guardada o imagen que nos detiene deja un pequeño rastro. Con el tiempo, esos fragmentos forman un archivo involuntario: una memoria digital que conserva intereses, obsesiones y etapas que quizá ya no reconocemos como propias.</p>
+            <p class="muted-copy">¿Cuánto de nuestra identidad permanece en lo que dejamos online y cuánto depende de lo que decidimos recordar?</p>
+          </div>
+        </div>
       </div>
-      <span class="chapter-mark" aria-hidden="true">01</span>
+      <div class="quote-strip"><span>MEMORY IS NOT A FIXED PLACE.</span><span>IT IS ALWAYS IN THE MAKING.</span><span>— NOTE 001</span></div>
     </section>
 
-    <section class="chapter traces" id="traces" aria-labelledby="traces-title">
-      <div class="section-index"><span>02</span><span>LOS RASTROS</span></div>
-      <div class="traces-heading">
-        <p class="eyebrow">MI ARCHIVO DIGITAL</p>
-        <h2 id="traces-title">Tres ventanas.<br><em>Fragmentos de mí.</em></h2>
-        <p>Observar lo que las plataformas conservan para reconstruir una historia que no siempre recordamos de la misma manera.</p>
-      </div>
-      <div class="trace-list">
-        <article class="trace-item">
-          <span class="trace-number">01</span>
-          <div><h3>Spotify</h3><p>Lo que escuchaba. Canciones, repeticiones y cambios de gusto como una banda sonora de distintas etapas.</p></div>
-          <span class="trace-tag">ESCUCHA</span>
-        </article>
-        <article class="trace-item">
-          <span class="trace-number">02</span>
-          <div><h3>Pinterest</h3><p>Lo que guardaba. Imágenes, búsquedas y tableros como un mapa indirecto de intereses e imaginarios.</p></div>
-          <span class="trace-tag">IMAGEN</span>
-        </article>
-        <article class="trace-item">
-          <span class="trace-number">03</span>
-          <div><h3>Instagram</h3><p>Lo que aparecía. Un flujo seleccionado por algoritmos que también influye en aquello que vemos y deseamos.</p></div>
-          <span class="trace-tag">ALGORITMO</span>
-        </article>
-      </div>
-      <p class="data-note"><span>*</span> Los datos personales concretos y las capturas se incorporarán después de comprobar su origen, contexto y privacidad.</p>
+    <section class="interlude" aria-label="Fragmento tipográfico">
+      <div class="interlude-word" aria-hidden="true">remember<span>?</span></div>
+      <p>EL PASADO NO DESAPARECE.<br>CAMBIA DE FORMA.</p>
+      <div class="interlude-noise" aria-hidden="true"></div>
     </section>
 
-    <section class="closing" id="about" aria-labelledby="about-title">
-      <p class="eyebrow">SOBRE ESTE PROYECTO</p>
-      <h2 id="about-title">No somos un archivo<br>cerrado<span>.</span></h2>
-      <p>Una exploración visual sobre identidad, memoria y huella digital. La web se construye por iteraciones: cada scroll se investiga, se diseña, se prueba y se revisa.</p>
-      <div class="status-line"><span class="status-dot"></span> PROTOTIPO EN DESARROLLO <span>·</span> VERSIÓN 0.1</div>
-      <a class="back-top" href="#top">VOLVER AL INICIO ↑</a>
+    <section class="traces section-pad" id="traces">
+      <div class="section-top"><span>02 / LOS RASTROS</span><span>THREE DIGITAL WINDOWS</span></div>
+      <div class="traces-intro reveal">
+        <p class="micro-label">MI ARCHIVO DIGITAL</p>
+        <h2>Tres ventanas.<br><em>Fragmentos de mí.</em></h2>
+        <p>Plataformas distintas guardan partes distintas. Ninguna cuenta la historia completa, pero juntas dibujan un retrato parcial.</p>
+      </div>
+
+      <div class="platforms">
+        <article class="platform platform-spotify reveal">
+          <div class="platform-head"><span>01 — SOUND MEMORY</span><span>SP / 001</span></div>
+          <div class="platform-art sound-art" aria-label="Composición abstracta de ondas sonoras">
+            <div class="sound-disc"></div><div class="sound-bars" aria-hidden="true"></div><span class="art-caption">A PLAYLIST<br>OF PAST SELVES</span><span class="art-corner">PLAY / REPEAT</span>
+          </div>
+          <div class="platform-info"><div><h3>Spotify</h3><p>Lo que escuchaba. Canciones, repeticiones y cambios de gusto como una banda sonora de distintas etapas.</p></div><span class="platform-symbol">♫</span></div>
+          <div class="platform-foot"><span>ESCUCHA</span><span>HISTORIAL / REPETICIÓN / CAMBIO</span></div>
+        </article>
+
+        <article class="platform platform-pinterest reveal">
+          <div class="platform-head"><span>02 — VISUAL MEMORY</span><span>PT / 002</span></div>
+          <div class="platform-art pin-art" aria-label="Collage abstracto de referencias visuales">
+            <div class="pin-card pin-one"><span>FORM<br>STUDY</span><b>◌</b></div>
+            <div class="pin-card pin-two"><b>ARCHIVE</b><span>COLLECT / SAVE / REPEAT</span></div>
+            <div class="pin-card pin-three"><span>MOOD<br>BOARD</span><b>✳</b></div>
+            <span class="art-corner">COLLECTED IMAGES</span>
+          </div>
+          <div class="platform-info"><div><h3>Pinterest</h3><p>Lo que guardaba. Imágenes, búsquedas y tableros como un mapa indirecto de intereses e imaginarios.</p></div><span class="platform-symbol">⌘</span></div>
+          <div class="platform-foot"><span>IMAGEN</span><span>GUARDAR / AGRUPAR / PROYECTAR</span></div>
+        </article>
+
+        <article class="platform platform-instagram reveal">
+          <div class="platform-head"><span>03 — ALGORITHMIC MEMORY</span><span>IG / 003</span></div>
+          <div class="platform-art insta-art" aria-label="Composición abstracta de un feed algorítmico">
+            <div class="feed-window"><div class="feed-top"><i></i><i></i><i></i></div><div class="feed-image"><span>FOR YOU</span><b>∞</b></div><div class="feed-lines"><i></i><i></i><i></i></div></div>
+            <div class="feed-cursor">YOU<br>SCROLLED<br>HERE ↗</div>
+            <span class="art-corner">SELECTED FOR YOU</span>
+          </div>
+          <div class="platform-info"><div><h3>Instagram</h3><p>Lo que aparecía. Un flujo seleccionado por algoritmos que también influye en aquello que vemos y deseamos.</p></div><span class="platform-symbol">◎</span></div>
+          <div class="platform-foot"><span>ALGORITMO</span><span>VER / DESCUBRIR / INFLUIR</span></div>
+        </article>
+      </div>
+      <p class="privacy-note"><span>*</span> Los datos personales concretos y las capturas se incorporarán después de comprobar su origen, contexto y privacidad.</p>
+    </section>
+
+    <section class="archive section-pad" id="archive">
+      <div class="section-top"><span>03 / ARCHIVO INCOMPLETO</span><span>FRAGMENTS, NOT FACTS</span></div>
+      <div class="archive-heading reveal"><p class="micro-label">A PERSONAL DATA DIARY</p><h2>No todo lo que<br>queda <em>nos define.</em></h2><p>Un archivo digital no es una biografía exacta. Es una colección de señales: algunas dicen mucho, otras se quedan en silencio.</p></div>
+      <div class="fragment-grid">
+        <button class="fragment-card fragment-a" type="button" aria-expanded="false">
+          <span class="fragment-top">FRAGMENT 001 <b>+</b></span><strong>LO QUE<br>ESCUCHO</strong><span class="fragment-graphic wave-mini" aria-hidden="true"></span><span class="fragment-reveal">Una canción puede devolvernos a un momento que creíamos olvidado.</span>
+        </button>
+        <button class="fragment-card fragment-b" type="button" aria-expanded="false">
+          <span class="fragment-top">FRAGMENT 002 <b>+</b></span><strong>LO QUE<br>GUARDO</strong><span class="fragment-graphic grid-mini" aria-hidden="true"></span><span class="fragment-reveal">Guardar una imagen también puede ser guardar una posibilidad de quién queríamos ser.</span>
+        </button>
+        <button class="fragment-card fragment-c" type="button" aria-expanded="false">
+          <span class="fragment-top">FRAGMENT 003 <b>+</b></span><strong>LO QUE<br>ME MUESTRAN</strong><span class="fragment-graphic loop-mini" aria-hidden="true">∞</span><span class="fragment-reveal">El algoritmo selecciona fragmentos, pero no conoce toda la historia que hay detrás.</span>
+        </button>
+      </div>
+      <p class="interaction-hint">↗ PULSA CADA FRAGMENTO PARA DESCUBRIR LO QUE ESCONDE</p>
+    </section>
+
+    <section class="reflection section-pad">
+      <div class="section-top"><span>04 / REFLEXIÓN</span><span>THE SELF IS IN PROGRESS</span></div>
+      <div class="reflection-layout">
+        <div class="reflection-number reveal">04<span>—</span></div>
+        <div class="reflection-content reveal"><p class="micro-label">UNA IDENTIDAD EN MOVIMIENTO</p><h2>Somos más que<br>nuestros <em>datos.</em></h2><p>Las plataformas conservan rastros, pero no pueden guardar todos los matices de una experiencia. Entre lo que recuerdan y lo que olvidamos existe un espacio: ahí aparece la posibilidad de reinterpretarnos.</p><div class="reflection-rule"><span>DATA ≠ IDENTITY</span><span>MEMORY ≠ HISTORY</span></div></div>
+      </div>
+    </section>
+
+    <section class="ending" id="ending">
+      <div class="ending-top"><span>END OF THIS CHAPTER</span><span>TO BE CONTINUED ↗</span></div>
+      <p class="micro-label">ECHOES OF WHO I WAS</p>
+      <h2>Not who<br>I <em>was.</em><br>Not yet who<br>I <em>will be.</em></h2>
+      <p class="ending-copy">No somos un archivo cerrado. Somos una historia que cambia cada vez que la recordamos.</p>
+      <a class="top-link" href="#top">VOLVER AL PRINCIPIO <span>↑</span></a>
+      <div class="ending-asterisk" aria-hidden="true">*</div>
     </section>
   </main>
-  <footer><span>ANA ZHANG</span><span>PROYECTO PERSONAL — ELISAVA</span><span>2026</span></footer>
+
+  <footer><span>ANA ZHANG</span><span>ECHOES OF WHO I WAS — A DIGITAL SELF-PORTRAIT</span><span>ELISAVA / 2026</span></footer>
 </body>
 </html>
