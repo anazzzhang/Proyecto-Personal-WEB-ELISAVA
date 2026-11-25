@@ -1,3 +1,33 @@
+## 2026-11-25 — Luz de cursor y desenfoque como metáfora del olvido
+
+### Trabajo realizado
+- Se añadió una luz radial suave que sigue el puntero en dispositivos con cursor preciso, como si iluminara partes de un archivo al recorrer la página.
+- Se incorporó un desenfoque selectivo en algunos elementos gráficos de las composiciones de Spotify, Pinterest, Instagram y el archivo.
+- En escritorio, los fragmentos desenfocados recuperan nitidez al acercar el cursor a su composición; en dispositivos táctiles se mantiene un desenfoque más ligero.
+- Se respetan las preferencias de movimiento reducido y se desactiva la luz en pantallas pequeñas para evitar una capa visual innecesaria.
+- Se conservaron estructura, colores monocromáticos y familias tipográficas existentes.
+
+### Decisiones
+- La luz no sustituye ni cambia el cursor del sistema: funciona como una iluminación ambiental amplia y discreta.
+- El desenfoque afecta solo a detalles gráficos, nunca al texto principal, para representar recuerdos incompletos sin perjudicar la lectura.
+- La nitidez al acercarse sugiere el acto de recuperar un fragmento de memoria.
+- El efecto es una propuesta visual implementada; su intensidad y comportamiento deben revisarse en navegador y con la autora.
+
+### Archivos modificados
+- `index.html`: capa de luz y selección de elementos gráficos desenfocados.
+- `style.css`: halo radial, estados de desenfoque y adaptaciones responsive/accesibles.
+- `script.js`: seguimiento del puntero mediante requestAnimationFrame.
+- `LOG.md`: registro de esta iteración.
+- `CONTEXT.md`: actualización del estado técnico.
+
+### Pendientes
+- Revisar la intensidad del halo en los modos claro y oscuro.
+- Comprobar que el desenfoque se entiende como recurso narrativo y no como un fallo de renderizado.
+- Probar escritorio, móvil, teclado y movimiento reducido; estas pruebas aún no se han realizado.
+- Confirmar el despliegue de GitHub Pages y revisar la experiencia visual real.
+
+---
+
 ## 2026-11-25 — Microinteracciones tipográficas
 
 ### Trabajo realizado
