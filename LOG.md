@@ -1,3 +1,33 @@
+## 2026-11-25 — Rediseño editorial e interacciones de la web
+
+### Trabajo realizado
+- Se sustituyó la primera composición de la web por una versión más larga, visual y tipográfica, con una dirección monocromática en blanco, negro y grises.
+- Se amplió el recorrido con secciones de pregunta, fragmento tipográfico, rastros digitales, archivo interactivo, reflexión y cierre.
+- Se diseñaron composiciones abstractas en CSS para Spotify, Pinterest e Instagram: disco/ondas, collage de tarjetas y feed algorítmico. No se han utilizado imágenes personales ni datos de plataformas sin verificar.
+- Se incorporó un control de modo claro/oscuro que guarda la preferencia localmente.
+- Se añadieron apariciones progresivas al entrar en viewport, progreso de lectura, navegación activa y tarjetas de fragmentos desplegables.
+- Se mantuvieron HTML, CSS y JavaScript separados, sin dependencias JavaScript adicionales.
+
+### Decisiones
+- La tipografía, la escala, el contraste, la retícula y el ritmo vertical pasan a ser los recursos principales de identidad visual.
+- Las imágenes abstractas funcionan como material gráfico provisional; se podrán sustituir o complementar con capturas y materiales reales cuando se verifiquen y se decida qué puede publicarse.
+- Se conserva el criterio de no inventar métricas personales ni presentar las plataformas como una biografía completa.
+- Esta iteración es una propuesta implementada en código, no una validación final ni una traducción contrastada con los frames de Figma.
+
+### Archivos modificados
+- `index.html`: nueva estructura narrativa y elementos interactivos.
+- `style.css`: sistema visual monocromático, composiciones gráficas y adaptación responsive.
+- `script.js`: tema claro/oscuro, progreso, revelado de elementos, navegación activa y tarjetas interactivas.
+
+### Pendientes
+- Abrir la web publicada y revisar visualmente el resultado en escritorio y móvil.
+- Comprobar el modo claro/oscuro, las tarjetas, la navegación y el comportamiento con teclado.
+- Contrastar esta dirección con el Figma y ajustar la composición según los frames reales.
+- Decidir qué capturas o imágenes personales se pueden incorporar con contexto y privacidad.
+- Actualizar las fichas de scroll con capturas y pruebas reales; la validación externa sigue pendiente.
+
+---
+
 ## 2026-11-25 — Consolidación de la documentación
 
 ### Trabajo realizado
