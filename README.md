@@ -9,7 +9,7 @@ La propuesta explora cómo los rastros que dejamos en plataformas digitales part
 
 ## Estado del proyecto
 
-**Fase actual:** conceptualización y documentación del proceso. La estructura de scrolls es una primera organización de trabajo y todavía puede cambiar. La web no se considera terminada.
+**Fase actual:** desarrollo de una segunda iteración visual y funcional. La estructura de scrolls sigue siendo provisional y la web no se considera terminada ni validada.
 
 El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y repetir: documentar las decisiones, las iteraciones de cada scroll, las pruebas y los cambios entre diseño y desarrollo.
 
@@ -22,7 +22,7 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 
 ## Contenido del repositorio
 
-- `index.html`, `style.css`, `script.js`: prototipo narrativo responsive v0.1; pendiente de contrastar con Figma.
+- `index.html`, `style.css`, `script.js`: prototipo narrativo responsive v0.2, con dirección editorial monocromática e interacciones; pendiente de revisión visual y contraste con Figma.
 - `SOUL.md`: criterio de colaboración, prioridades y rigor.
 - `CONTEXT.md`: brief, concepto, materiales y estado actual.
 - `INSTRUCTIONS.md`: procedimiento de trabajo y continuidad.
