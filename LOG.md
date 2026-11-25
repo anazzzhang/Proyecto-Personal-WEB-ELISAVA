@@ -1,3 +1,31 @@
+## 2026-11-25 — Microinteracciones tipográficas
+
+### Trabajo realizado
+- Se añadieron palabras interactivas en la portada, la pregunta de investigación, la introducción de los rastros, la reflexión y el cierre.
+- Al pasar el cursor o enfocar una palabra aparece una pequeña nota contextual; al pulsarla, la nota queda abierta para lectura y uso táctil.
+- Se añadió una respuesta magnética muy sutil al movimiento del cursor sobre el gran titular de portada.
+- Se conservaron las familias tipográficas existentes (Manrope, Playfair Display y DM Mono), sus roles y la dirección monocromática.
+- Se mantuvo la estructura narrativa y el sistema de scroll de la iteración anterior.
+
+### Decisiones
+- La interacción se integra en palabras y fragmentos de texto, sin convertir el diseño en una interfaz de botones convencional.
+- Las notas amplían el sentido de términos como «ECHOES», «remember», «rastros», «nos define» y «reinterpretarnos».
+- Las microinteracciones deben reforzar la idea de que la memoria y la identidad se reinterpretan; no se añaden efectos que dificulten la lectura.
+- Las palabras interactivas usan elementos accesibles por teclado y también se pueden activar mediante toque.
+
+### Archivos modificados
+- `index.html`: palabras y frases interactivas con notas contextuales.
+- `style.css`: estados hover/focus/activo y pequeñas transiciones, sin cambiar tipografías.
+- `script.js`: apertura/cierre de notas y respuesta magnética del titular.
+
+### Pendientes
+- Revisar manualmente el comportamiento en escritorio y móvil, especialmente el posicionamiento de las notas contextuales en pantallas pequeñas.
+- Comprobar navegación con teclado, lector de pantalla y preferencias de movimiento reducido.
+- Revisar el despliegue de GitHub Pages y recoger capturas para las fichas de scroll.
+- Ajustar los textos de las notas si la autora quiere otro tono o contenido.
+
+---
+
 ## 2026-11-25 — Rediseño editorial e interacciones de la web
 
 ### Trabajo realizado
