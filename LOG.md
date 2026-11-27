@@ -1,3 +1,21 @@
+## 2026-11-27 (3) — Silenciar nombres y reducir el peso de un grupo (v0.6.1)
+
+### Petición de la autora
+Que «Jungkook», «jk» y su nombre en coreano tengan menos presencia y que, si hace falta, BTS no destaque tanto.
+
+### Cambios
+- Hashtags: `herramientas/procesar_datos.py` define `SILENCIADOS`; esas etiquetas ya no se exportan a `data/echoes-data.js` ni aparecen en la nube de hashtags.
+- Gráficos de Spotify: el nombre sigue en los datos para no falsear los rankings, pero se muestra desenfocado (clase `.silenced`), sin etiqueta en el río y como «nombre silenciado» en tooltips y lectores de pantalla.
+- «La constante» (que destacaba a BTS) pasa a ser «El número uno»: cuántos artistas distintos han sido el más escuchado del año (5 en 6 años).
+- «Ecos» deja de girar en torno a un grupo: ahora es «Lo que sigue ahí» (artistas de 2021 que siguen sonando, el tablero INSPO desde 2021, guardados con etiquetas de diseño).
+- La frase de la primera canción ya no nombra al artista.
+- Se eliminan del archivo de datos los recuentos `echoHours`, `echoSaved` y `echoSearches`.
+
+### Pendiente
+- BTS sigue apareciendo donde los datos lo requieren (ranking anual, río, leyenda). Si Ana quiere bajarlo más, opción: desenfocarlo igual que el otro nombre.
+
+---
+
 ## 2026-11-27 (2) — Estructura del documento maestro y gráficos interactivos (v0.6)
 
 ### Trabajo realizado

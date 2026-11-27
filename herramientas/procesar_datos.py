@@ -17,6 +17,11 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Madrid")
 
+# Decisión de la autora (2026-11-27): no destacar ciertos nombres en la web.
+# Los hashtags que coinciden no se exportan; el resto del archivo no cambia.
+SILENCIADOS = re.compile(r"jungkook|jung ?kook|jeonjungkook|^jk$|정국|bts|방탄|bangtan|taehyung|jimin|army", re.I)
+DISENO = re.compile(r"design|typograph|font|illustrat|poster|editorial|visualculture|branding|layout", re.I)
+
 
 def local(ts_iso):
     return datetime.datetime.fromisoformat(ts_iso.replace("Z", "+00:00")).astimezone(TZ)
@@ -125,7 +130,6 @@ def spotify(path, log_path):
         "years": years,
         "allTime": [{"name": a, "hours": hours(v), "first": first[a], "last": last[a]} for a, v in total.most_common(10)],
         "forgotten": [{"name": k[0], "artist": k[1], "hours": hours(ms), "first": a, "last": b} for ms, k, a, b in forgotten],
-        "echoHours": hours(sum(r["ms_played"] for r in rows if r["_a"] in ("BTS", "Jung Kook", "Jimin", "JIN", "V", "SUGA", "Agust D", "RM", "j-hope"))),
         "hourCurve": [hour_curve.get(h, 0) for h in range(24)],
         "months": months,
         "river": [{"name": a, "hours": [hours(river[a].get(m, 0)) for m in months]} for a in top8 + ["Otros"]],
@@ -182,10 +186,8 @@ def pinterest(path):
         for i, l in enumerate(lines):
             if l.startswith("Query: "):
                 q.append(l[7:].strip().lower())
-    echo_q = [s for s in q if re.search(r"jungkook|jung kook|bts", s)]
     return {
         "totalPins": len(pins),
-        "echoSearches": len(echo_q),
         "perYear": [{"year": y, "pins": n} for y, n in sorted(per_year.items())],
         "perMonth": dict(sorted(per_month.items())),
         "boards": board_list,
@@ -238,9 +240,9 @@ def instagram(path):
         "stories": len(stories),
         "saved": len(saved),
         "liked": len(liked),
-        "topHashtags": [t for t, _ in tags.most_common(30)],
-        "echoSaved": sum(1 for x in saved if any(
-            lv.get("title") == "Hashtags" and any(re.search(r"jungkook|bts|정국|방탄", fix(d["dict"][0]["value"]).lower()) for d in lv["dict"])
+        "topHashtags": [t for t, _ in tags.most_common(40) if not SILENCIADOS.search(t)][:30],
+        "designSaved": sum(1 for x in saved if any(
+            lv.get("title") == "Hashtags" and any(DISENO.search(fix(d["dict"][0]["value"])) for d in lv["dict"])
             for lv in x["label_values"])),
         "viewWindow": [
             datetime.datetime.fromtimestamp(min(window), TZ).date().isoformat(),

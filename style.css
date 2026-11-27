@@ -98,7 +98,7 @@ body.cursor-active .cursor-light{opacity:1}
 .nb span:last-child{font:9px var(--mono);color:var(--muted);padding-bottom:8px}
 .night-copy,.constant-copy{font-size:14px;line-height:1.7;color:var(--muted);max-width:430px;margin-top:22px}
 .constant{border:1px solid var(--ink);padding:26px;align-self:start;position:relative}
-.constant:after{content:"∞";position:absolute;right:20px;top:14px;font:28px var(--serif)}
+.constant:after{content:"№1";position:absolute;right:20px;top:14px;font:28px var(--serif)}
 .constant-name{font:800 clamp(64px,8vw,120px)/.85 var(--display);letter-spacing:-.1em;margin:26px 0 0}
 
 .forgotten{margin-top:14vh}
@@ -331,3 +331,6 @@ svg rect[tabindex]:focus{outline:none;stroke:var(--ink);stroke-width:1}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .chart-hint-row{margin:-6px 0 14px}
 .mobile-only{display:none}@media(max-width:800px){.mobile-only{display:block;margin:0 0 10px}}
+.echo-card strong{overflow-wrap:anywhere}
+.silenced{filter:blur(5px);user-select:none;-webkit-user-select:none;display:inline-block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}

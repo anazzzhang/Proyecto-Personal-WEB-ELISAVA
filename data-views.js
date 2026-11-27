@@ -19,6 +19,11 @@
   const bind = (key, html) => document.querySelectorAll(`[data-bind="${key}"]`).forEach(n => { n.innerHTML = html; });
   const SVG = 'http://www.w3.org/2000/svg';
   const sv = (tag, attrs = {}, parent) => { const n = document.createElementNS(SVG, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+  /* Nombres silenciados por decisión de la autora: se mantienen en los datos (no se altera el ranking)
+     pero se muestran desenfocados y se anuncian como «nombre silenciado». */
+  const SIL = /jung ?kook|jungkook|정국|^jk$/i;
+  const an = name => SIL.test(name) ? `<span class="silenced" aria-hidden="true">${esc(name)}</span><span class="sr-only">nombre silenciado</span>` : esc(name);
+  const at = name => SIL.test(name) ? 'nombre silenciado' : name;
   const monthRange = (from, to) => { const out = []; let [y, m] = from.split('-').map(Number); const [ty, tm] = to.split('-').map(Number); while (y < ty || (y === ty && m <= tm)) { out.push(`${y}-${String(m).padStart(2, '0')}`); m++; if (m > 12) { m = 1; y++; } } return out; };
 
   /* Tooltip único */
@@ -65,7 +70,7 @@
   const sp = D.spotify;
   const firstYear = sp.years[0], lastYear = sp.years[sp.years.length - 1];
   bind('sp-range', `${sp.range[0].slice(0, 4)}—${sp.range[1].slice(0, 4)}`);
-  bind('sp-first', `«${esc(sp.firstTrack.name)}» de ${esc(sp.firstTrack.artist)}, el ${fmtDate(sp.firstTrack.date)}`);
+  bind('sp-first', `«${esc(sp.firstTrack.name)}», el ${fmtDate(sp.firstTrack.date)}`);
   bind('sp-plays', nf.format(sp.totalPlays));
   bind('sp-partial', `${firstYear.year} empieza el ${fmtDate(sp.range[0])} y ${lastYear.year} termina el ${fmtDate(sp.range[1])}, fecha de la exportación: son años incompletos.`);
 
@@ -84,7 +89,7 @@
     riverPaths.forEach((p, i) => { p.classList.toggle('dim', f != null && i !== f); p.classList.toggle('hi', f === i); });
   }
   riverSeries.forEach((s, i) => {
-    const b = el('button', 'legend-item', `<i style="--o:${TONES[i]}"></i>${esc(s.name)}`);
+    const b = el('button', 'legend-item', `<i style="--o:${TONES[i]}"></i>${an(s.name)}`);
     b.type = 'button'; b.setAttribute('aria-pressed', 'false');
     b.addEventListener('click', () => { riverFocus = riverFocus === i ? null : i; legend.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', String(j === riverFocus))); applyRiverFocus(); });
     b.addEventListener('mouseenter', () => applyRiverFocus(i));
@@ -119,7 +124,7 @@
     // Etiquetas directas en el pico de las 4 franjas mayores.
     if (W >= 600) riverSeries.forEach((s, i) => {
       let jm = 0; stack.forEach((c, j) => { if (c[i][1] - c[i][0] > stack[jm][i][1] - stack[jm][i][0]) jm = j; });
-      if (y(stack[jm][i][0]) - y(stack[jm][i][1]) < 16) return;
+      if (y(stack[jm][i][0]) - y(stack[jm][i][1]) < 16 || SIL.test(s.name)) return;
       const yy = (y(stack[jm][i][0]) + y(stack[jm][i][1])) / 2;
       const t = sv('text', { x: Math.min(W - 70, Math.max(m.l + 40, x(jm))), y: yy + 4, class: 'band-label', 'text-anchor': 'middle' }, svg); t.textContent = s.name;
     });
@@ -134,7 +139,7 @@
       cross.setAttribute('x1', x(j)); cross.setAttribute('x2', x(j)); cross.classList.add('on');
       if (riverFocus == null) applyRiverFocus(i >= 0 ? i : undefined);
       const rows = riverSeries.map((s, k) => ({ k, name: s.name, h: rv(s, j) })).filter(o => o.h >= .1).sort((a, b) => b.h - a.h);
-      showTip(`<b>${monthLabel(months[j])}</b>${rows.map(o => `<span class="${o.k === i ? 'tip-hi' : ''}">${esc(o.name)}<em>${rfmt(o.h)}</em></span>`).join('') || '<span>—</span>'}<span class="tip-muted">resto de artistas<em>${rfmt(rv(otherSeries, j))}</em></span><span class="tip-muted">total del mes<em>${nf1.format(monthTotal[j])} h</em></span>`, ev.clientX, ev.clientY);
+      showTip(`<b>${monthLabel(months[j])}</b>${rows.map(o => `<span class="${o.k === i ? 'tip-hi' : ''}">${esc(at(o.name))}<em>${rfmt(o.h)}</em></span>`).join('') || '<span>—</span>'}<span class="tip-muted">resto de artistas<em>${rfmt(rv(otherSeries, j))}</em></span><span class="tip-muted">total del mes<em>${nf1.format(monthTotal[j])} h</em></span>`, ev.clientX, ev.clientY);
     });
     hit.addEventListener('pointerleave', () => { hideTip(); cross.classList.remove('on'); applyRiverFocus(); });
   }
@@ -147,15 +152,15 @@
     strip.querySelectorAll('button').forEach(b => { const on = b === btn; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
     const isNow = y.year === lastYear.year;
     detail.innerHTML = `
-      <div class="yd-main"><span class="yd-year">${y.year}</span><p class="yd-track">«${esc(y.topTrack.name)}»<span>${esc(y.topTrack.artist)} · canción más escuchada</span></p></div>
-      <ol class="yd-artists">${y.topArtists.map((a, i) => `<li><span>${String(i + 1).padStart(2, '0')}</span><b>${esc(a.name)}</b><i style="--w:${(a.hours / y.topArtists[0].hours * 100).toFixed(1)}"></i><em>${nf.format(Math.round(a.hours))} h</em><small class="${isNow || a.nowHours >= 5 ? 'stay' : 'gone'}">${isNow ? 'AHORA' : a.nowHours >= 5 ? `SIGUE · ${nf.format(Math.round(a.nowHours))} H EN ${lastYear.year}` : 'EN SILENCIO'}</small></li>`).join('')}</ol>
+      <div class="yd-main"><span class="yd-year">${y.year}</span><p class="yd-track">«${esc(y.topTrack.name)}»<span>${an(y.topTrack.artist)} · canción más escuchada</span></p></div>
+      <ol class="yd-artists">${y.topArtists.map((a, i) => `<li><span>${String(i + 1).padStart(2, '0')}</span><b>${an(a.name)}</b><i style="--w:${(a.hours / y.topArtists[0].hours * 100).toFixed(1)}"></i><em>${nf.format(Math.round(a.hours))} h</em><small class="${isNow || a.nowHours >= 5 ? 'stay' : 'gone'}">${isNow ? 'AHORA' : a.nowHours >= 5 ? `SIGUE · ${nf.format(Math.round(a.nowHours))} H EN ${lastYear.year}` : 'EN SILENCIO'}</small></li>`).join('')}</ol>
       <dl class="yd-facts"><div><dt>HORAS</dt><dd>${nf.format(y.hours)}</dd></div><div><dt>ARTISTAS DISTINTOS</dt><dd>${nf.format(y.artists)}</dd></div><div><dt>CANCIONES SALTADAS</dt><dd>${y.skipShare ? Math.round(y.skipShare * 100) + '%' : '—'}</dd></div></dl>`;
   };
   sp.years.forEach((y, i) => {
     const b = el('button', 'year-col');
     b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', 'year-detail');
     b.style.setProperty('--h', (y.hours / maxH * 100).toFixed(1) + '%');
-    b.innerHTML = `<span class="yc-bar"><span class="yc-hours">${nf.format(y.hours)} h</span></span><span class="yc-artist">${esc(y.topArtists[0].name)}</span><span class="yc-year">${y.year}</span>`;
+    b.innerHTML = `<span class="yc-bar"><span class="yc-hours">${nf.format(y.hours)} h</span></span><span class="yc-artist">${an(y.topArtists[0].name)}</span><span class="yc-year">${y.year}</span>`;
     b.addEventListener('click', () => showYear(y, b));
     b.addEventListener('keydown', e => {
       const btns = [...strip.querySelectorAll('button')], cur = btns.indexOf(b);
@@ -186,21 +191,18 @@
   });
   bind('sp-night', `En ${firstYear.year}, ${Math.round(firstYear.nightShare * 100)} de cada 100 canciones sonaban de madrugada; en ${lastYear.year}, ${Math.round(lastYear.nightShare * 100)}.`);
 
-  /* --- La constante (calculada) --- */
-  const inTop = sp.years.map(y => y.topArtists.slice(0, 3).map(a => a.name));
-  const constant = inTop[0].find(name => inTop.every(list => list.includes(name)));
-  if (constant) {
-    const at = sp.allTime.find(a => a.name === constant);
-    bind('sp-constant', esc(constant));
-    bind('sp-constant-copy', `Es el único artista que está entre mis tres más escuchados todos los años, de ${firstYear.year} a ${lastYear.year}. ${at ? nf.format(Math.round(at.hours)) + ' horas en total.' : ''} Todo lo demás cambia; esto se queda.`);
-  } else $('.constant')?.remove();
+  /* --- El número uno (calculado) --- */
+  const ones = sp.years.map(y => y.topArtists[0].name);
+  const distinct = new Set(ones).size;
+  bind('sp-constant', String(distinct));
+  bind('sp-constant-copy', `números uno distintos en ${sp.years.length} años. El artista que más escucho cambia casi cada año: ninguna versión de mí dura mucho en lo más alto.`);
 
   /* --- Canciones olvidadas --- */
   const fl = $('#forgotten-list');
   sp.forgotten.slice(0, 10).forEach((t, i) => {
     const li = el('li', 'fg-item');
     li.tabIndex = 0;
-    li.innerHTML = `<span class="fg-n">${String(i + 1).padStart(2, '0')}</span><span class="fg-name memory-blur">${esc(t.name)}<i>${esc(t.artist)} · ${nf1.format(t.hours)} h</i></span><span class="fg-date">${fmtDate(t.last)}</span>`;
+    li.innerHTML = `<span class="fg-n">${String(i + 1).padStart(2, '0')}</span><span class="fg-name memory-blur">${esc(t.name)}<i>${an(t.artist)} · ${nf1.format(t.hours)} h</i></span><span class="fg-date">${fmtDate(t.last)}</span>`;
     const tog = () => li.classList.toggle('is-recalled');
     li.addEventListener('click', tog);
     li.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tog(); } });
@@ -357,9 +359,9 @@
     const named = bs.filter(([b]) => !b.numbered).length;
     grid.innerHTML = `
       <article class="recon-card"><span class="rc-top">ESCUCHABA <i>SPOTIFY</i></span>
-        <strong>${esc(Y.topArtists[0].name)}</strong>
-        <p>«${esc(Y.topTrack.name)}» · ${esc(Y.topTrack.artist)}</p>
-        <ul>${Y.topArtists.map(a => `<li class="${isNow || a.nowHours >= 5 ? '' : 'faded'}">${esc(a.name)}<em>${nf.format(Math.round(a.hours))} h</em></li>`).join('')}</ul>
+        <strong>${an(Y.topArtists[0].name)}</strong>
+        <p>«${esc(Y.topTrack.name)}» · ${an(Y.topTrack.artist)}</p>
+        <ul>${Y.topArtists.map(a => `<li class="${isNow || a.nowHours >= 5 ? '' : 'faded'}">${an(a.name)}<em>${nf.format(Math.round(a.hours))} h</em></li>`).join('')}</ul>
         <small>${isNow ? 'Así suena ahora.' : `${stay} de 5 siguen sonando en ${lastYear.year}. Los atenuados, ya no.`}</small></article>
       <article class="recon-card"><span class="rc-top">GUARDABA <i>PINTEREST</i></span>
         <strong>${nf.format(pinsYear[yr] || 0)} <span>pines</span></strong>
@@ -375,11 +377,16 @@
   range.addEventListener('input', renderRecon);
   renderRecon();
 
-  /* ================================================================== ECOS */
+  /* ================================================================== ECOS: lo que sigue ahí */
   const echo = $('#echo-grid');
-  [
-    ['SPOTIFY', `${nf.format(Math.round(sp.echoHours))} h`, `escuchando a BTS y a sus miembros en solitario. La primera canción del archivo ya era suya: «${esc(sp.firstTrack.name)}».`],
-    ['INSTAGRAM', nf.format(ig.echoSaved), 'publicaciones guardadas con etiquetas de BTS o Jungkook, entre las más repetidas de mis guardados.'],
-    ['PINTEREST', nf.format(pt.echoSearches), 'búsquedas con el nombre de Jungkook: zapatillas, botas, iconos.'],
-  ].forEach(([p, n, t], i) => echo.appendChild(el('article', 'echo-card', `<span class="echo-top">${p}<i>0${i + 1}</i></span><strong>${n}</strong><p>${t}</p>`)));
+  const y0 = sp.years[0];
+  const stay0 = y0.topArtists.filter(a => a.nowHours >= 5).length;
+  const lastYr = String(lastYear.year);
+  const longest = pt.boards.filter(b => !b.numbered && b.last.startsWith(lastYr)).sort((a, b) => a.first.localeCompare(b.first))[0];
+  const cards = [
+    ['SPOTIFY', `${stay0} de ${y0.topArtists.length}`, `artistas de mi top de ${y0.year} siguen sonando en ${lastYear.year}. El resto se quedó en esa versión de mí.`],
+    longest && ['PINTEREST', esc(longest.name), `es el único tablero con nombre que me acompaña desde ${longest.first.slice(0, 4)}: ${nf.format(longest.pins)} imágenes guardadas hasta ${fmtDate(longest.last)}.`],
+    ['INSTAGRAM', nf.format(ig.designSaved), `de mis ${nf.format(ig.saved)} guardados llevan etiquetas de diseño, tipografía o ilustración. Lo que estudio también es lo que guardo.`],
+  ].filter(Boolean);
+  cards.forEach(([p, n, t], i) => echo.appendChild(el('article', 'echo-card', `<span class="echo-top">${p}<i>0${i + 1}</i></span><strong>${n}</strong><p>${t}</p>`)));
 })();

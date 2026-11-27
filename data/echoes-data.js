@@ -397,7 +397,6 @@ window.ECHOES_DATA = {
     "last": "2023-10-24"
    }
   ],
-  "echoHours": 300.6,
   "hourCurve": [
    5560,
    3646,
@@ -1625,7 +1624,6 @@ window.ECHOES_DATA = {
  },
  "pinterest": {
   "totalPins": 2823,
-  "echoSearches": 5,
   "perYear": [
    {
     "year": 2021,
@@ -2237,8 +2235,6 @@ window.ECHOES_DATA = {
   "liked": 1257,
   "topHashtags": [
    "graphicdesign",
-   "jungkook",
-   "bts",
    "typography",
    "fyp",
    "radiimedia",
@@ -2250,8 +2246,6 @@ window.ECHOES_DATA = {
    "china",
    "gelx",
    "viral",
-   "jeonjungkook",
-   "정국",
    "chinese",
    "nailtechtoronto",
    "gelnails",
@@ -2261,13 +2255,17 @@ window.ECHOES_DATA = {
    "aesthetic",
    "visualculture",
    "graphicdesigner",
-   "jk",
    "illustration",
-   "taehyung",
    "designinspiration",
-   "fonts"
+   "fonts",
+   "reels",
+   "ทำเล็บ",
+   "ต่อเล็บ",
+   "buildergel",
+   "illustrator",
+   "trending"
   ],
-  "echoSaved": 21,
+  "designSaved": 50,
   "viewWindow": [
    "2026-09-08",
    "2026-09-21"
