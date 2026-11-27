@@ -1,0 +1,7 @@
+# Exportaciones personales en bruto: nunca se suben (la web se publica desde la raíz).
+*.zip
+exportaciones/
+Spotify*/
+PINTEREST*/
+instagram-*/
+.DS_Store

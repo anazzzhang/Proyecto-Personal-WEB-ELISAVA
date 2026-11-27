@@ -1,3 +1,37 @@
+## 2026-11-27 — Datos reales de Spotify, Pinterest e Instagram (v0.5)
+
+### Trabajo realizado
+- Ana compartió sus exportaciones de Spotify (historial ampliado y registro técnico), Pinterest e Instagram.
+- Se creó `herramientas/procesar_datos.py`: lee las exportaciones y genera `data/echoes-data.js` solo con datos agregados. El proceso se puede repetir con exportaciones nuevas.
+- Se añadieron cuatro secciones: 02.1 Spotify, 02.2 Pinterest, 02.3 Instagram y 03 Ecos. Las tarjetas de «Los rastros» enlazan a cada sección. Archivo pasa a ser 04 y Reflexión 05.
+- Nuevo `data-views.js` para dibujar los datos; los estilos nuevos están al final de `style.css` y mantienen la paleta y las tipografías.
+- Se añadió `.gitignore` para que las exportaciones en bruto no se publiquen nunca (GitHub Pages despliega la raíz).
+
+### Datos principales (confirmados por el script)
+- Spotify: 3.177 horas y 72.956 reproducciones (27.08.2021–22.10.2026). Artista principal por año: ENHYPEN (2021), BTS (2022, 2023), Billie Eilish (2024), Bad Bunny (2025), Daniel Caesar (2026). Escucha entre las 00:00 y las 05:00: del 5 % al 30 %. 191 nombres de *daylist* (28.04.2026–24.10.2026).
+- Pinterest: 2.823 pines con fecha; tableros con números entre 2021 y 2023, tableros con nombre desde 2024.
+- Instagram: 3 publicaciones, 156 historias y 364 guardados frente a 1.257 «me gusta» registrados y 2.561 anunciantes con listas que coinciden con el perfil.
+
+### Decisiones
+- Se publican solo cifras agregadas, nombres de artistas, canciones, tableros y hashtags.
+- Se excluyen mensajes, contactos, usuarios de terceros, IP, ubicaciones, búsquedas de Pinterest, fotos y categorías publicitarias personales (por ejemplo, estado sentimental o nivel de estudios) hasta que Ana decida.
+- El trabajo está en la rama `datos-reales`; no se fusiona en `main` (ni se despliega) sin la aprobación de Ana.
+
+### Pruebas
+- Renderizado en Chrome sin interfaz a 1440 px (claro y oscuro) y 390 px, sin errores de JavaScript. Se corrigieron cuatro problemas visuales (ver ficha del scroll 03).
+- Pendiente: revisión manual de Ana, teclado y lector de pantalla, y prueba con una persona externa.
+
+### Archivos
+- Creados: `herramientas/procesar_datos.py`, `data/echoes-data.js`, `data-views.js`, `.gitignore`.
+- Modificados: `index.html`, `style.css`, `LOG.md`, `CONTEXT.md`, `README.md`, `documentacion/fichas-de-scroll.md`.
+
+### Próximos pasos
+1. Ana revisa textos y datos y decide si incluir fotos, búsquedas de Pinterest o las categorías publicitarias.
+2. Definir qué se rediseña del resto de la web.
+3. Fusionar en `main` y comprobar la URL publicada.
+
+---
+
 ## 2026-11-25 — Luz de cursor y desenfoque como metáfora del olvido
 
 ### Trabajo realizado
