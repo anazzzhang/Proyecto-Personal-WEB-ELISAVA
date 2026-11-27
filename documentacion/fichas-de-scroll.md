@@ -96,7 +96,18 @@ Formular la pregunta central y explicar por qué mirar los rastros digitales pue
 
 ## Scroll 03 — Digital traces
 
-**Estado:** propuesta.
+**Estado:** implementado en código con datos reales (v0.5, rama `datos-reales`); revisión de la autora y prueba externa pendientes.
+
+### Iteración v0.5 — datos reales (2026-11-27)
+- **Pregunta:** ¿cómo enseñar los rastros reales sin convertir la web en un dashboard?
+- **Hipótesis:** si cada plataforma responde a un verbo (escuchar, guardar, mirar) y cada dato se presenta como un fragmento con una frase, se lee como memoria y no como estadística.
+- **Cambio:** tres subscrolls nuevos: 02.1 Spotify (`#sound`), 02.2 Pinterest (`#images`) y 02.3 Instagram (`#feed`). Los datos salen de las exportaciones oficiales mediante `herramientas/procesar_datos.py`, que solo escribe agregados en `data/echoes-data.js`.
+- **Contenido:** horas por año y artista principal; escucha nocturna; artista constante (calculado); canciones abandonadas antes de junio de 2024; nombres de *daylist* generados por Spotify; pines por año y tableros por fecha de creación; publicaciones propias frente a actividad registrada; hashtags de los guardados; cuentas seguidas por año.
+- **Interacción:** selector de años con teclado (flechas); canciones olvidadas desenfocadas que recuperan nitidez al pasar el cursor o tocar; botón «otra versión de mí» que cambia el nombre de la *daylist*; tableros numerados desenfocados frente a tableros con nombre.
+- **Privacidad:** no se publican mensajes, contactos, usuarios de terceros, IP, ubicaciones, búsquedas de Pinterest ni categorías publicitarias personales. Las exportaciones en bruto no se suben (`.gitignore`).
+- **Prueba realizada:** renderizado en Chrome sin interfaz a 1440 px (claro y oscuro) y 390 px. Sin errores de JavaScript. Se corrigieron: formato de miles en números de cuatro cifras, barras de artistas que no se dibujaban, «0 %» de canciones saltadas en 2021 (el dato no existe ese año, ahora se muestra «—») y textos que no cabían en tableros pequeños en móvil.
+- **Evidencia:** capturas de la sesión; commit en la rama `datos-reales`.
+- **Pendiente:** revisión de Ana (tono de los textos, qué datos se publican), contraste con Figma y prueba con una persona externa.
 
 ### Objetivo
 Presentar las plataformas como archivos parciales de intereses, hábitos y comportamientos a lo largo del tiempo.
@@ -199,7 +210,13 @@ Organizar los rastros como un recorrido autobiográfico, conectando fragmentos d
 
 ## Scroll 06 — Findings
 
-**Estado:** propuesta.
+**Estado:** primer hallazgo implementado en código (v0.5, sección «03 / Ecos»); revisión pendiente.
+
+### Iteración v0.5 — «Un mismo nombre en tres archivos» (2026-11-27)
+- **Observación:** BTS es el único artista que está en el top 3 de Spotify todos los años (2021–2026), y la primera canción del archivo es «Butter». La misma presencia aparece en Instagram (guardados con etiquetas de BTS o Jungkook) y en Pinterest (búsquedas con su nombre).
+- **Cambio:** sección `#echo` con tres tarjetas, una por plataforma. Las cifras se calculan en el script, no se escriben a mano.
+- **Hipótesis por validar:** que un hallazgo repetido en las tres plataformas comunica mejor la idea de eco que una lista de estadísticas.
+- **Pendiente:** confirmar con la autora que quiere este hallazgo como eje y redactar los demás hallazgos.
 
 ### Objetivo
 Compartir qué patrones, contradicciones o cambios aparecen al observar los rastros digitales junto con la memoria actual.
@@ -274,3 +291,4 @@ Añadir una línea cada vez que se complete una vuelta de trabajo. Mantener los 
 | 2026-11-25 | 01 | Desarrollo conceptual de la introducción y definición de responsabilidades | CONTEXT.md; conversaciones de trabajo | Trabajo conceptual documentado. Sin frame/captura ni test de comprensión; verificación externa pendiente |
 | 2026-11-25 | 02 | Desarrollo conceptual de la pregunta de investigación y su función narrativa | CONTEXT.md; conversaciones de trabajo | Trabajo conceptual documentado. La pregunta definitiva y su legibilidad visual siguen pendientes |
 | 2026-11-25 | 01, 03 y archivo | Luz ambiental que sigue el cursor y desenfoque selectivo de elementos gráficos para representar el olvido | Commit `6b1418e`; `db04197`; `524d923` | Interacción implementada en código; falta revisar intensidad, legibilidad y comportamiento real en escritorio/móvil. No equivale a validación de uso |
+| 2026-11-27 | 03 y 06 | Incorporación de datos reales de Spotify, Pinterest e Instagram y primer hallazgo «Ecos» | Rama `datos-reales`; `herramientas/procesar_datos.py`; capturas de la sesión | Implementado y renderizado en escritorio, móvil y modo oscuro sin errores. Falta revisión de la autora y prueba externa |

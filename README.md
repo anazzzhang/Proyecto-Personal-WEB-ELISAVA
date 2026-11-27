@@ -30,6 +30,18 @@ El objetivo de esta entrega es hacer visible un proceso que se pueda seguir y re
 - `documentacion/proceso.md`: metodología para documentar y repetir el proceso.
 - `documentacion/fichas-de-scroll.md`: fichas de loop de cada scroll.
 - `.github/workflows/pages.yml`: workflow para publicar el sitio con GitHub Pages.
+- `herramientas/procesar_datos.py`: convierte las exportaciones de Spotify, Pinterest e Instagram en `data/echoes-data.js` (solo agregados). Las exportaciones en bruto no se suben.
+- `data-views.js`: dibuja las secciones de datos reales.
+
+## Regenerar los datos
+
+```bash
+python3 herramientas/procesar_datos.py \
+  --spotify "RUTA/Spotify Extended Streaming History" \
+  --spotify-log "RUTA/Spotify Technical Log Information" \
+  --pinterest "RUTA/PINTEREST" \
+  --instagram "RUTA/instagram-anazzzhang-FECHA"
+```
 
 ## Estructura de trabajo provisional
 
