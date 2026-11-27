@@ -1,3 +1,34 @@
+## 2026-11-27 (2) — Estructura del documento maestro y gráficos interactivos (v0.6)
+
+### Trabajo realizado
+- Ana compartió el documento maestro de contexto; se guarda en `documentacion/documento-maestro.md`.
+- La web se reorganiza en los cuatro momentos del documento: 01 Introduction / The question, 02 The digital footprints / The archive, 03 Reconstruction / Connecting the pieces, 04 Reflection / Who am I now? La navegación refleja esa estructura.
+- Pregunta de investigación actualizada con la formulación del documento y cuatro subpreguntas.
+- Títulos de plataforma del documento: *The soundtrack of who I was*, *The things I once imagined*, *The person the algorithm sees*.
+- Gráficos interactivos nuevos (SVG propio, sin librerías):
+  - Spotify: río de artistas por mes (horas o % del mes, leyenda que aísla artistas, tooltip con el desglose); mapa de calor hora × año; cada artista del top anual indica si «sigue» sonando en 2026 o está «en silencio»; nube de palabras de las *daylists* que filtra los nombres.
+  - Pinterest: pines por mes con el pico anotado; vida de cada tablero (una fila por tablero y un punto por mes).
+  - Instagram: múltiplos pequeños de «me gusta», guardados e historias por mes, cada fila con su escala (sin doble eje).
+  - Reconstrucción: selector de año que cruza las tres plataformas (lo que escuchaba, guardaba y seguía) y atenúa lo que ya no está.
+- Frase final del documento añadida al cierre.
+
+### Decisiones
+- Se mantiene el criterio de privacidad de la v0.5 (sin mensajes, búsquedas, ubicaciones, fotos ni categorías publicitarias).
+- Monocromo: la identidad de cada serie se marca con tono, etiqueta y leyenda, nunca solo con el color.
+
+### Datos a revisar
+- El documento maestro cita 2.858 pines, 35 tableros y 195 búsquedas. La exportación que se ha procesado contiene 2.830 pines únicos (2.823 con fecha), 34 tableros y 191 búsquedas. La web usa las cifras de la exportación; conviene confirmar si el documento se basó en otra descarga.
+
+### Pruebas
+- Chrome sin interfaz a 1440 px (claro y oscuro) y 390 px: sin errores de JavaScript; comprobados hover del río, modo %, filtro de *daylists* y selector de años.
+- Pendiente: revisión manual de Ana, lector de pantalla, prueba con una persona externa.
+
+### Archivos
+- Creados: `documentacion/documento-maestro.md`.
+- Modificados: `index.html`, `style.css`, `data-views.js`, `herramientas/procesar_datos.py`, `data/echoes-data.js`, `LOG.md`, `CONTEXT.md`, `documentacion/fichas-de-scroll.md`.
+
+---
+
 ## 2026-11-27 — Datos reales de Spotify, Pinterest e Instagram (v0.5)
 
 ### Trabajo realizado

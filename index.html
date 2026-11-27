@@ -23,10 +23,9 @@
     <a class="wordmark" href="#top" aria-label="Echoes of who I was, inicio">ECHOES<span>®</span></a>
     <nav aria-label="Navegación principal">
       <a href="#question">01 / Pregunta</a>
-      <a href="#traces">02 / Rastros</a>
-      <a href="#echo">03 / Ecos</a>
-      <a href="#archive">04 / Archivo</a>
-      <a href="#ending">05 / Cierre</a>
+      <a href="#traces">02 / Archivo</a>
+      <a href="#reconstruction">03 / Reconstrucción</a>
+      <a href="#archive">04 / Reflexión</a>
     </nav>
     <div class="header-tools">
       <span class="edition">ELISAVA · 2026</span>
@@ -64,7 +63,13 @@
           <h2>¿Y si las plataformas recordaran versiones de mí que <em><button class="word-trigger" type="button" data-note="Lo que una plataforma conserva no siempre coincide con lo que yo recuerdo.">yo ya he olvidado?</button></em></h2>
           <div class="question-copy">
             <p>Cada búsqueda, canción guardada o imagen que nos detiene deja un pequeño rastro. Con el tiempo, esos fragmentos forman un archivo involuntario: una memoria digital que conserva intereses, obsesiones y etapas que quizá ya no reconocemos como propias.</p>
-            <p class="muted-copy">¿Cuánto de nuestra identidad permanece en lo que dejamos online y cuánto depende de lo que decidimos recordar?</p>
+            <p class="muted-copy">¿Cómo pueden nuestros rastros digitales ayudarnos a reconstruir versiones anteriores de nuestra identidad y comprender cómo hemos evolucionado con el tiempo?</p>
+            <ol class="subquestions">
+              <li><span>Q.01</span>¿Cuánto de nuestro antiguo yo hemos olvidado?</li>
+              <li><span>Q.02</span>¿Hasta qué punto nuestras plataformas funcionan como archivos de nuestra memoria?</li>
+              <li><span>Q.03</span>¿Somos conscientes de cuánto influye el entorno digital en quiénes somos?</li>
+              <li><span>Q.04</span>¿Qué ocurre cuando descubrimos una versión de nosotros que ya no reconocemos del todo?</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -78,7 +83,7 @@
     </section>
 
     <section class="traces section-pad" id="traces">
-      <div class="section-top"><span>02 / LOS RASTROS</span><span>THREE DIGITAL WINDOWS</span></div>
+      <div class="section-top"><span>02 / THE DIGITAL FOOTPRINTS</span><span>THE ARCHIVE</span></div>
       <div class="traces-intro reveal">
         <p class="micro-label">MI ARCHIVO DIGITAL</p>
         <h2>Tres ventanas.<br><em><button class="word-trigger" type="button" data-note="Cada plataforma conserva una versión parcial, nunca la historia completa.">Fragmentos de mí.</button></em></h2>
@@ -91,7 +96,7 @@
           <div class="platform-art sound-art" aria-label="Composición abstracta de ondas sonoras">
             <div class="sound-disc"></div><div class="sound-bars memory-blur" aria-hidden="true"></div><span class="art-caption">A PLAYLIST<br>OF PAST SELVES</span><span class="art-corner">PLAY / REPEAT</span>
           </div>
-          <div class="platform-info"><div><h3>Spotify</h3><p>Lo que escuchaba. Canciones, repeticiones y cambios de gusto como una banda sonora de distintas etapas.</p></div><span class="platform-symbol">♫</span></div>
+          <div class="platform-info"><div><h3>Spotify</h3><p class="platform-sub">THE SOUNDTRACK OF WHO I WAS</p><p>Lo que escuchaba y sentía. Canciones, repeticiones y cambios de gusto como una banda sonora de distintas etapas.</p></div><span class="platform-symbol">♫</span></div>
           <div class="platform-foot"><span>ESCUCHA</span><a href="#sound">VER MIS DATOS ↓</a></div>
         </article>
 
@@ -103,7 +108,7 @@
             <div class="pin-card pin-three"><span>MOOD<br>BOARD</span><b>✳</b></div>
             <span class="art-corner">COLLECTED IMAGES</span>
           </div>
-          <div class="platform-info"><div><h3>Pinterest</h3><p>Lo que guardaba. Imágenes, búsquedas y tableros como un mapa indirecto de intereses e imaginarios.</p></div><span class="platform-symbol">⌘</span></div>
+          <div class="platform-info"><div><h3>Pinterest</h3><p class="platform-sub">THE THINGS I ONCE IMAGINED</p><p>Lo que me inspiraba e imaginaba. Imágenes, búsquedas y tableros como un mapa indirecto de intereses e imaginarios.</p></div><span class="platform-symbol">⌘</span></div>
           <div class="platform-foot"><span>IMAGEN</span><a href="#images">VER MIS DATOS ↓</a></div>
         </article>
 
@@ -114,7 +119,7 @@
             <div class="feed-cursor memory-blur">YOU<br>SCROLLED<br>HERE ↗</div>
             <span class="art-corner">SELECTED FOR YOU</span>
           </div>
-          <div class="platform-info"><div><h3>Instagram</h3><p>Lo que aparecía. Un flujo seleccionado por algoritmos que también influye en aquello que vemos y deseamos.</p></div><span class="platform-symbol">◎</span></div>
+          <div class="platform-info"><div><h3>Instagram</h3><p class="platform-sub">THE PERSON THE ALGORITHM SEES</p><p>Lo que consumía y lo que el algoritmo interpretaba de mí. Un flujo seleccionado por algoritmos que también influye en aquello que vemos y deseamos.</p></div><span class="platform-symbol">◎</span></div>
           <div class="platform-foot"><span>ALGORITMO</span><a href="#feed">VER MIS DATOS ↓</a></div>
         </article>
       </div>
@@ -124,23 +129,32 @@
 
     <!-- 02.1 SPOTIFY — datos reales (data/echoes-data.js) -->
     <section class="data-scroll sound section-pad" id="sound" aria-labelledby="sound-title">
-      <div class="section-top"><span>02.1 / SOUND MEMORY</span><span>SPOTIFY · <span data-bind="sp-range"></span></span></div>
+      <div class="section-top"><span>02.1 / THE SOUNDTRACK OF WHO I WAS</span><span>SPOTIFY · <span data-bind="sp-range"></span></span></div>
       <div class="data-heading reveal">
-        <p class="micro-label">LO QUE ESCUCHABA</p>
+        <p class="micro-label">LO QUE ESCUCHABA Y SENTÍA</p>
         <h2 id="sound-title"><span class="count" data-count="sp-hours">0</span> horas<br><em>de mí sonando.</em></h2>
         <p>La primera canción que conserva el archivo es <strong data-bind="sp-first"></strong>. Desde entonces, <span data-bind="sp-plays"></span> reproducciones dibujan una banda sonora que cambia de idioma, de ritmo y de hora.</p>
       </div>
 
+      <figure class="chart-block reveal">
+        <figcaption class="chart-head"><p class="micro-label">FIG. 02.1A — EL RÍO DE MIS ARTISTAS</p><div class="seg" role="group" aria-label="Unidad"><button type="button" data-mode="hours" aria-pressed="true">HORAS AL MES</button><button type="button" data-mode="share" aria-pressed="false">% DE CADA MES</button></div></figcaption>
+        <p class="chart-hint chart-hint-row">PASA EL CURSOR · PULSA UN NOMBRE PARA AISLARLO</p>
+        <div class="legend" id="river-legend" role="group" aria-label="Artistas"></div>
+        <div class="chart" id="river-chart" role="img" aria-label="Horas mensuales de escucha de mis ocho artistas más escuchados entre 2021 y 2026"></div>
+        <p class="chart-read">Cada franja es un artista. Algunas aparecen de golpe y se apagan; otras atraviesan los cinco años. Lo que no está aquí (miles de horas más) se reparte entre más de dos mil artistas.</p>
+      </figure>
+
+      <div class="chart-head chart-head-solo reveal"><p class="micro-label">FIG. 02.1B — CADA AÑO, UNA VERSIÓN · PULSA UN AÑO</p></div>
       <div class="year-strip reveal" role="tablist" aria-label="Años de escucha" id="year-strip"></div>
       <div class="year-detail reveal" id="year-detail" aria-live="polite"></div>
       <p class="data-note">* <span data-bind="sp-partial"></span></p>
 
       <div class="data-split">
-        <div class="night reveal">
-          <p class="micro-label">ESCUCHAS ENTRE LAS 00:00 Y LAS 05:00</p>
-          <div class="night-bars" id="night-bars"></div>
+        <figure class="chart-block heat reveal">
+          <figcaption class="chart-head"><p class="micro-label">FIG. 02.1C — A QUÉ HORA ESCUCHO</p><span class="chart-hint">% DE LAS ESCUCHAS DE CADA AÑO</span></figcaption>
+          <div class="chart" id="heat-chart" role="img" aria-label="Porcentaje de escuchas por hora del día y año"></div>
           <p class="night-copy">La música se ha ido desplazando hacia la noche. <span data-bind="sp-night"></span></p>
-        </div>
+        </figure>
         <div class="constant reveal">
           <p class="micro-label">LA CONSTANTE</p>
           <p class="constant-name" data-bind="sp-constant"></p>
@@ -155,32 +169,40 @@
       </div>
 
       <div class="daylist reveal">
-        <p class="micro-label">ASÍ ME NOMBRA EL ALGORITMO</p>
+        <p class="micro-label">ASÍ ME NOMBRA EL ALGORITMO · DAYLISTS DE SPOTIFY</p>
         <p class="daylist-title" id="daylist-title" aria-live="polite"></p>
-        <div class="daylist-foot"><button class="daylist-btn" id="daylist-btn" type="button">OTRA VERSIÓN DE MÍ ↻</button><span data-bind="sp-daylists"></span></div>
+        <div class="daylist-tags" id="daylist-tags" role="group" aria-label="Filtrar por palabra"></div>
+        <div class="daylist-foot"><button class="daylist-btn" id="daylist-btn" type="button">OTRA VERSIÓN DE MÍ ↻</button><span id="daylist-count" data-bind="sp-daylists"></span></div>
       </div>
     </section>
 
     <!-- 02.2 PINTEREST -->
     <section class="data-scroll images section-pad" id="images" aria-labelledby="images-title">
-      <div class="section-top"><span>02.2 / VISUAL MEMORY</span><span>PINTEREST</span></div>
+      <div class="section-top"><span>02.2 / THE THINGS I ONCE IMAGINED</span><span>PINTEREST</span></div>
       <div class="data-heading reveal">
-        <p class="micro-label">LO QUE GUARDABA</p>
+        <p class="micro-label">LO QUE ME INSPIRABA E IMAGINABA</p>
         <h2 id="images-title"><span class="count" data-count="pt-pins">0</span> imágenes<br><em>que quise conservar.</em></h2>
         <p>Pinterest no guarda las imágenes en mi exportación, solo sus huellas: el tablero, la fecha, el gesto de guardar. Lo que queda es la forma de mi archivo.</p>
       </div>
-      <div class="pins-year reveal" id="pins-year" aria-label="Pines guardados por año"></div>
-      <div class="boards-head reveal"><p class="micro-label">MIS TABLEROS, POR FECHA DE CREACIÓN</p><div class="boards-legend"><span><i class="lg-num"></i>TABLEROS CON NÚMEROS</span><span><i class="lg-name"></i>TABLEROS CON NOMBRE</span></div></div>
-      <div class="boards reveal" id="boards"></div>
+      <figure class="chart-block reveal">
+        <figcaption class="chart-head"><p class="micro-label">FIG. 02.2A — PINES GUARDADOS CADA MES</p><span class="chart-hint">PASA EL CURSOR POR UNA BARRA</span></figcaption>
+        <div class="chart" id="pins-chart" role="img" aria-label="Pines guardados por mes entre 2021 y 2026"></div>
+      </figure>
+      <figure class="chart-block reveal">
+        <figcaption class="chart-head"><p class="micro-label">FIG. 02.2B — LA VIDA DE CADA TABLERO</p><div class="boards-legend"><span><i class="lg-num"></i>TABLEROS CON NÚMEROS</span><span><i class="lg-name"></i>TABLEROS CON NOMBRE</span></div></figcaption>
+        <p class="chart-hint mobile-only">← DESLIZA PARA VER TODOS LOS AÑOS →</p>
+        <div class="chart chart-scroll" id="boards-chart" role="img" aria-label="Actividad de cada tablero de Pinterest a lo largo del tiempo"></div>
+        <p class="chart-read">Cada fila es un tablero; cada punto, un mes en el que guardé algo en él. El tamaño indica cuántas imágenes. Hay tableros que duran una semana y otros que me acompañan años.</p>
+      </figure>
       <p class="boards-copy reveal">Entre 2021 y 2023 mis tableros no tenían nombre: <b>1111, 2222, 4444, ZZZZ</b>. A partir de 2024 empiezan a llamarse <b>REVISTA</b>, <b>LLIBRES</b>, <b>SELFPUBLISHING</b>, <b>PORTFOLIO</b>, <b>TFG</b>. Guardar dejó de ser solo acumular y empezó a ser trabajar.</p>
       <p class="data-note">Interpretación personal a partir de los nombres y fechas de los tableros.</p>
     </section>
 
     <!-- 02.3 INSTAGRAM -->
     <section class="data-scroll feed section-pad" id="feed" aria-labelledby="feed-title">
-      <div class="section-top"><span>02.3 / ALGORITHMIC MEMORY</span><span>INSTAGRAM</span></div>
+      <div class="section-top"><span>02.3 / THE PERSON THE ALGORITHM SEES</span><span>INSTAGRAM</span></div>
       <div class="data-heading reveal">
-        <p class="micro-label">LO QUE ME MOSTRABAN</p>
+        <p class="micro-label">LO QUE CONSUMÍA Y LO QUE EL ALGORITMO INTERPRETABA DE MÍ</p>
         <h2 id="feed-title">Publico poco.<br><em>Miro mucho.</em></h2>
         <p>Mi perfil casi no dice nada. Lo que Instagram guarda de mí no es lo que publico, sino lo que miro, lo que guardo y lo que me gusta.</p>
       </div>
@@ -188,14 +210,26 @@
         <div class="ledger-col"><p class="micro-label">LO QUE YO MUESTRO</p><dl id="ledger-me"></dl></div>
         <div class="ledger-col ledger-them"><p class="micro-label">LO QUE INSTAGRAM REGISTRA</p><dl id="ledger-them"></dl></div>
       </div>
+      <figure class="chart-block reveal">
+        <figcaption class="chart-head"><p class="micro-label">FIG. 02.3A — MOSTRAR FRENTE A CONSUMIR · CADA MES</p><span class="chart-hint">CADA FILA TIENE SU PROPIA ESCALA</span></figcaption>
+        <div class="chart" id="ig-chart" role="img" aria-label="Me gusta, guardados e historias por mes"></div>
+      </figure>
       <div class="tags reveal">
         <div><p class="micro-label">LO QUE GUARDO · HASHTAGS DE MIS GUARDADOS</p><ul class="tag-cloud" id="tags-me"></ul></div>
         <div><p class="micro-label">LO QUE LE HABLA AL ALGORITMO</p><ul class="tag-cloud tag-cloud-algo" id="tags-algo"></ul></div>
       </div>
-      <div class="following reveal">
-        <p class="micro-label">CUENTAS QUE EMPECÉ A SEGUIR, POR AÑO</p>
-        <div class="following-bars" id="following-bars"></div>
+      <div class="question-algo reveal"><p class="micro-label">LA PREGUNTA</p><p>¿La imagen que el algoritmo tiene de mí coincide realmente con quién soy?</p></div>
+    </section>
+
+    <!-- 03 RECONSTRUCCIÓN -->
+    <section class="recon section-pad" id="reconstruction" aria-labelledby="recon-title">
+      <div class="section-top"><span>03 / RECONSTRUCTION</span><span>CONNECTING THE PIECES</span></div>
+      <div class="data-heading reveal"><p class="micro-label">VERSIONES DE MÍ</p><h2 id="recon-title">Elige un año.<br><em>Conoce a quien era.</em></h2><p>Las tres plataformas, cruzadas en un mismo año. Mueve la línea del tiempo y mira qué se queda y qué se va.</p></div>
+      <div class="recon-control reveal">
+        <input type="range" id="recon-range" min="0" max="5" step="1" value="0" aria-label="Año">
+        <div class="recon-years" id="recon-years"></div>
       </div>
+      <div class="recon-grid reveal" id="recon-grid" aria-live="polite"></div>
     </section>
 
     <!-- 03 ECOS -->
@@ -205,8 +239,10 @@
       <div class="echo-grid" id="echo-grid"></div>
     </section>
 
+    <div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
+
     <section class="archive section-pad" id="archive">
-      <div class="section-top"><span>04 / ARCHIVO INCOMPLETO</span><span>FRAGMENTS, NOT FACTS</span></div>
+      <div class="section-top"><span>04 / REFLECTION</span><span>FRAGMENTS, NOT FACTS</span></div>
       <div class="archive-heading reveal"><p class="micro-label">A PERSONAL DATA DIARY</p><h2>No todo lo que<br>queda <em><button class="word-trigger" type="button" data-note="Los datos hablan de acciones e intereses, pero no explican por completo quiénes somos.">nos define.</button></em></h2><p>Un archivo digital no es una biografía exacta. Es una colección de señales: algunas dicen mucho, otras se quedan en silencio.</p></div>
       <div class="fragment-grid">
         <button class="fragment-card fragment-a" type="button" aria-expanded="false">
@@ -223,9 +259,9 @@
     </section>
 
     <section class="reflection section-pad">
-      <div class="section-top"><span>05 / REFLEXIÓN</span><span>THE SELF IS IN PROGRESS</span></div>
+      <div class="section-top"><span>04 / WHO AM I NOW?</span><span>THE SELF IS IN PROGRESS</span></div>
       <div class="reflection-layout">
-        <div class="reflection-number reveal">05<span>—</span></div>
+        <div class="reflection-number reveal">04<span>—</span></div>
         <div class="reflection-content reveal"><p class="micro-label">UNA IDENTIDAD EN MOVIMIENTO</p><h2>Somos más que<br>nuestros <em>datos.</em></h2><p>Las plataformas conservan <button class="word-trigger" type="button" data-note="Una huella es una pista, no una explicación definitiva.">rastros</button>, pero no pueden guardar todos los matices de una experiencia. Entre lo que recuerdan y lo que olvidamos existe un espacio: ahí aparece la posibilidad de <button class="word-trigger" type="button" data-note="Mirar el pasado desde el presente cambia el significado de lo que encontramos.">reinterpretarnos.</button></p><div class="reflection-rule"><span>DATA ≠ IDENTITY</span><span>MEMORY ≠ HISTORY</span></div></div>
       </div>
     </section>
@@ -234,7 +270,7 @@
       <div class="ending-top"><span>END OF THIS CHAPTER</span><span>TO BE CONTINUED ↗</span></div>
       <p class="micro-label">ECHOES OF WHO I WAS</p>
       <h2>Not who<br>I <em><button class="word-trigger" type="button" data-note="Una versión anterior de mí, vista desde el presente.">was.</button></em><br>Not yet who<br>I <em><button class="word-trigger" type="button" data-note="La identidad no es un resultado cerrado: sigue cambiando.">will be.</button></em></h2>
-      <p class="ending-copy">No somos un archivo cerrado. Somos una historia que cambia cada vez que la recordamos.</p>
+      <p class="ending-copy">No somos un archivo cerrado. Somos una historia que cambia cada vez que la recordamos.<br><i>Somewhere in our digital past, a version of ourselves is still waiting to be found.</i></p>
       <a class="top-link" href="#top">VOLVER AL PRINCIPIO <span>↑</span></a>
       <div class="ending-asterisk" aria-hidden="true">*</div>
     </section>

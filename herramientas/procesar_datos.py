@@ -50,6 +50,10 @@ def spotify(path, log_path):
     by_year = collections.defaultdict(list)
     for r in rows:
         by_year[r["_t"].year].append(r)
+    latest = max(by_year)
+    now_art = collections.Counter()
+    for r in by_year[latest]:
+        now_art[r["_a"]] += r["ms_played"]
     for y, rs in sorted(by_year.items()):
         art = collections.Counter(); trk = collections.Counter()
         for r in rs:
@@ -60,7 +64,7 @@ def spotify(path, log_path):
             "hours": round(sum(r["ms_played"] for r in rs) / 3.6e6),
             "plays": len(rs),
             "artists": len(art),
-            "topArtists": [{"name": a, "hours": hours(v)} for a, v in art.most_common(5)],
+            "topArtists": [{"name": a, "hours": hours(v), "nowHours": hours(now_art.get(a, 0))} for a, v in art.most_common(5)],
             "topTrack": {"name": trk.most_common(1)[0][0][0], "artist": trk.most_common(1)[0][0][1]},
             "nightShare": round(night / len(rs), 3),
             "skipShare": round(sum(1 for r in rs if r.get("skipped")) / len(rs), 3),
@@ -81,7 +85,20 @@ def spotify(path, log_path):
 
     hour_curve = collections.Counter(r["_t"].hour for r in rows)
 
+    # Río de artistas: horas por mes de los 8 artistas más escuchados + "otros".
+    top8 = [a for a, _ in total.most_common(8)]
+    months = sorted({r["_t"].strftime("%Y-%m") for r in rows})
+    river = {a: collections.Counter() for a in top8 + ["Otros"]}
+    for r in rows:
+        river[r["_a"] if r["_a"] in top8 else "Otros"][r["_t"].strftime("%Y-%m")] += r["ms_played"]
+    # Matriz año x hora (porcentaje de reproducciones de cada año en cada hora).
+    hm = {}
+    for y, rs in by_year.items():
+        c = collections.Counter(r["_t"].hour for r in rs)
+        hm[y] = [round(c.get(h, 0) / len(rs), 4) for h in range(24)]
+
     daylists = []
+    daylist_tags = []
     f = os.path.join(log_path, "DaylistGenerated.json") if log_path else None
     if f and os.path.exists(f):
         d = json.load(open(f, encoding="utf8"))
@@ -91,6 +108,11 @@ def spotify(path, log_path):
             if t not in seen:
                 seen.append(t)
         daylists = seen
+        desc = collections.Counter()
+        for x in d:
+            for m in re.findall(r">([^<]+)</a>", x["message_playlist_description"]):
+                desc[m.strip()] += 1
+        daylist_tags = [{"tag": t, "n": n} for t, n in desc.most_common(36)]
         dl_range = [
             datetime.datetime.fromtimestamp(min(x["context_time"] for x in d) / 1000, TZ).date().isoformat(),
             datetime.datetime.fromtimestamp(max(x["context_time"] for x in d) / 1000, TZ).date().isoformat(),
@@ -105,8 +127,12 @@ def spotify(path, log_path):
         "forgotten": [{"name": k[0], "artist": k[1], "hours": hours(ms), "first": a, "last": b} for ms, k, a, b in forgotten],
         "echoHours": hours(sum(r["ms_played"] for r in rows if r["_a"] in ("BTS", "Jung Kook", "Jimin", "JIN", "V", "SUGA", "Agust D", "RM", "j-hope"))),
         "hourCurve": [hour_curve.get(h, 0) for h in range(24)],
+        "months": months,
+        "river": [{"name": a, "hours": [hours(river[a].get(m, 0)) for m in months]} for a in top8 + ["Otros"]],
+        "hourMatrix": [{"year": y, "share": hm[y]} for y in sorted(hm)],
         "daylists": daylists,
         "daylistRange": dl_range if daylists else None,
+        "daylistTags": daylist_tags if daylists else [],
     }
 
 
@@ -145,6 +171,9 @@ def pinterest(path):
             "numbered": bool(re.fullmatch(r"(\d)\1{3}|ZZZZ", name)),
         })
     board_list.sort(key=lambda b: b["first"])
+    for b in board_list:
+        b["months"] = dict(collections.Counter(d[:7] for d in boards[b["name"]]))
+    per_month = collections.Counter(p["Created at"][:7].replace("/", "-") for p in pins)
 
     q = []
     f = os.path.join(path, "search_history", "0001.html")
@@ -158,6 +187,7 @@ def pinterest(path):
         "totalPins": len(pins),
         "echoSearches": len(echo_q),
         "perYear": [{"year": y, "pins": n} for y, n in sorted(per_year.items())],
+        "perMonth": dict(sorted(per_month.items())),
         "boards": board_list,
         "searchCount": len(q),
     }
@@ -174,6 +204,20 @@ def instagram(path):
     liked = J("your_instagram_activity/likes/liked_posts.json")
     if isinstance(liked, dict):
         liked = list(liked.values())[0]
+    M = lambda t: datetime.datetime.fromtimestamp(t, TZ).strftime("%Y-%m")
+    def stamps(items):
+        out = []
+        for it in items:
+            t = it.get("timestamp")
+            for sd in it.get("string_list_data") or []:
+                t = t or sd.get("timestamp")
+            if t: out.append(t)
+        return out
+    monthly = {
+        "liked": dict(collections.Counter(M(t) for t in stamps(liked))),
+        "saved": dict(collections.Counter(M(x["timestamp"]) for x in saved)),
+        "stories": dict(collections.Counter(M(x["creation_timestamp"]) for x in stories)),
+    }
     tags = collections.Counter()
     for x in saved:
         for lv in x["label_values"]:
@@ -206,6 +250,7 @@ def instagram(path):
         "videosWatched": len(videos),
         "adsViewed": len(ads),
         "advertisers": len(adv_names),
+        "monthly": monthly,
     }
 
 

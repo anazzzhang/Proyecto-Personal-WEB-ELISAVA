@@ -98,6 +98,12 @@ Formular la pregunta central y explicar por qué mirar los rastros digitales pue
 
 **Estado:** implementado en código con datos reales (v0.5, rama `datos-reales`); revisión de la autora y prueba externa pendientes.
 
+### Iteración v0.6 — gráficos interactivos (2026-11-27)
+- **Pregunta:** ¿cómo hacer que los datos se exploren en vez de solo leerse?
+- **Cambio:** río de artistas (horas / % del mes, leyenda que aísla), mapa de calor hora × año, marca «sigue / en silencio» por artista, filtro de *daylists*, pines por mes con pico anotado, vida de cada tablero y múltiplos pequeños de Instagram. Títulos de plataforma del documento maestro.
+- **Prueba:** renderizado en escritorio, móvil y modo oscuro sin errores; interacciones comprobadas con cursor simulado.
+- **Pendiente:** revisión de Ana y prueba externa (¿se entiende el río sin explicación?).
+
 ### Iteración v0.5 — datos reales (2026-11-27)
 - **Pregunta:** ¿cómo enseñar los rastros reales sin convertir la web en un dashboard?
 - **Hipótesis:** si cada plataforma responde a un verbo (escuchar, guardar, mirar) y cada dato se presenta como un fragmento con una frase, se lee como memoria y no como estadística.
@@ -292,3 +298,4 @@ Añadir una línea cada vez que se complete una vuelta de trabajo. Mantener los 
 | 2026-11-25 | 02 | Desarrollo conceptual de la pregunta de investigación y su función narrativa | CONTEXT.md; conversaciones de trabajo | Trabajo conceptual documentado. La pregunta definitiva y su legibilidad visual siguen pendientes |
 | 2026-11-25 | 01, 03 y archivo | Luz ambiental que sigue el cursor y desenfoque selectivo de elementos gráficos para representar el olvido | Commit `6b1418e`; `db04197`; `524d923` | Interacción implementada en código; falta revisar intensidad, legibilidad y comportamiento real en escritorio/móvil. No equivale a validación de uso |
 | 2026-11-27 | 03 y 06 | Incorporación de datos reales de Spotify, Pinterest e Instagram y primer hallazgo «Ecos» | Rama `datos-reales`; `herramientas/procesar_datos.py`; capturas de la sesión | Implementado y renderizado en escritorio, móvil y modo oscuro sin errores. Falta revisión de la autora y prueba externa |
+| 2026-11-27 | 02, 03, 05 y 06 | Estructura en cuatro momentos (documento maestro), gráficos interactivos y sección «Reconstrucción» con selector de año | `documentacion/documento-maestro.md`; commit v0.6 | Implementado y renderizado sin errores; revisión de la autora y prueba externa pendientes |
